@@ -1,0 +1,405 @@
+// ****** HEADER TOP *****
+.header {
+
+    width: 100%;
+    overflow: hidden;
+
+    &__top {
+        background-color: var(--header-bcg);
+        padding: 0.9375rem 0;
+    }
+
+    &__container {
+        // display: flex;
+    }
+
+    &__inner {
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__right {
+        width: 14vw;
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: 840.98px) {
+            width: 80%;
+        }
+    }
+
+    &__times {
+        width: 30vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-right: 1.5625rem;
+
+        @media (max-width: 840.98px) {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            font-size: 0px;
+            margin: 0;
+            transform: translateY(-250%);
+            z-index: 17;
+        }
+
+        &--map {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__clock-text {
+        // text clock
+        color: var(--text);
+        white-space: nowrap;
+
+    }
+
+    &-clocks {
+        // Icon header
+        display: inline-block;
+        margin-bottom: 0.2125rem;
+        margin-right: 0.625rem;
+        width: 23px;
+
+    }
+
+    // social
+    &__social {
+        margin-top: 0.3rem;
+        display: flex;
+    }
+
+    &__social--link {
+        width: 24px;
+
+        &:first-child {
+            margin-right: 1.08rem;
+        }
+
+        &:last-child {
+            margin-right: 1.875rem;
+
+            @media (max-width: 991.98px) {
+                margin-right: 1.45rem;
+            }
+        }
+    }
+
+    &__cabinet {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        flex: 1 0 auto;
+
+        @media (max-width: 840.98px) {
+            display: none;
+        }
+    }
+
+    &__cabinet--image {
+        margin-right: 0.8313rem;
+    }
+
+    // PHONE BLOCK
+    &__phone {
+        display: none;
+
+        @media (max-width: 840.98px) {
+            margin-top: 0.3rem;
+            display: flex;
+            flex: 0 0 30px;
+            align-items: center;
+        }
+    }
+}
+
+// ****** HEADER TOP *****
+
+
+// ****** HEADER MIDDLE *****
+.header {
+    &__middle {
+        background-color: white;
+        box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+        width: 100%;
+    }
+
+    &__wrapper--middle {
+        display: flex;
+        align-items: center;
+        padding: 0.93rem 0;
+        width: 100%;
+
+        @media(max-width:991.98px) {
+            justify-content: space-between;
+        }
+
+        @media (max-width:768.98px) {
+            justify-content: space-around;
+            justify-content: space-between;
+        }
+    }
+
+    // ************ LOGO *************
+    &__logo {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+        margin-right: 1.45rem;
+        order: 1;
+    }
+
+    &__img {
+        display: block;
+    }
+
+    &__logo--text {
+        margin-left: 0.55rem;
+    }
+
+    // ************ LOGO *************
+
+    // ********************** CONTACTS **************************
+    &__contacts {
+        display: flex;
+        align-items: center;
+        flex: 1 1 227px;
+        margin-right: 30px;
+        order: 5;
+
+        @media(max-width: 1175.98px) {
+            flex: 0 0 auto;
+            // width: 100px;
+            order: 2;
+        }
+
+        @media (max-width:768.98px) {
+            display: none;
+        }
+
+        &--contmenu {
+            margin-bottom: 20px;
+
+            &:nth-child(1) {
+                color: #0093A2;
+            }
+        }
+
+        &--wrap {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1 1 168px;
+
+            @media(max-width: 1175.98px) {
+                display: none;
+                width: 0;
+                flex-basis: 0;
+            }
+        }
+
+        &--link {
+            margin-right: 10px;
+        }
+
+        &--img {
+            flex: 0 0;
+            width: 44px;
+            display: flex;
+            align-self: center;
+        }
+
+        &--tel {
+            flex: 1 0 170px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            font-family: 'TT Norms medium';
+            color: var(--link);
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &--wraptel {
+            flex: 1 1 100%;
+        }
+
+        &--arrow {}
+
+        &--text {
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--light-red);
+            padding-bottom: 5px;
+            text-decoration: none;
+            border-bottom: 1px solid var(--light-red);
+        }
+
+        &--drop {
+            position: absolute;
+            z-index: 25;
+            display: block;
+            visibility: hidden;
+            width: min-content;
+            max-width: 300px;
+            opacity: 0;
+            flex-direction: column;
+            border: 1px solid #F2F3F5;
+            box-shadow: 0px 10px 30px rgb(34 42 70 / 10%);
+            border-radius: 10px;
+            background-color: white;
+            padding: 20px;
+            transition: var(--ease-transit);
+
+            &:first-child {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__liked {
+        margin-right: 20px;
+        flex: 1 0 44px;
+        order: 6;
+        display: flex;
+        justify-content: flex-end;
+
+        @media(max-width:768.98px) {
+            display: none;
+        }
+
+        &--img {
+            display: flex;
+            align-self: center;
+        }
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        order: 7;
+        flex: 0 0 auto;
+        justify-content: flex-end;
+
+        @media(max-width:768.98px) {
+            display: none;
+        }
+
+        &--img {
+            margin-right: 14px;
+            display: flex;
+            align-self: center;
+
+            @media(max-width:1440px) {
+                margin-right: calc(24px - (24 - 14) * ((100vw - 320px) / 880));
+            }
+        }
+
+        &--summ {}
+    }
+
+    // ********************** CONTACTS **************************
+}
+
+// ****** HEADER MIDDLE *****
+
+// **************** HEADER BOTTOM ************************
+.header {
+    &__bottom {
+        padding: 19px 0;
+        background-color: white;
+        box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+
+        &--item {
+        }
+        &--nav{
+            @media(max-width:768.98px){
+                max-width: 500px;
+            }
+            
+        }
+        &--wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        &--title {
+            display: flex;
+            align-items: center;
+            margin-right: 41px;
+
+            @media(max-width:991.98px) {
+                margin-right: 30px;
+            }
+        }
+
+        &--stock {
+            text-transform: uppercase;
+            margin-left: 10px;
+        }
+
+        &--img {
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+    }
+
+
+
+}
+
+// **************** HEADER BOTTOM ************************
+
+// ********** БЛОК ДОСТАВКА ЦВЕТОВ В ВОРОНЕЖЕ ****************
+.delivery {
+    &__text {
+        width: 30vw;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--text);
+
+        @media(max-width:375.98px) {
+            font-size: 12px;
+        }
+    }
+
+    &__text--top {
+        margin-left: 15px;
+    }
+
+    &__middleHeader {
+        order: 2;
+        margin-right: 1.16rem;
+
+        @media(max-width: 991.98px) {
+            display: none;
+        }
+    }
+}
+
+.lightred__block {
+    font-family: "TT Norms medium";
+    flex: 0 0 auto;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--light-red);
+}
+
+.arrow {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+
+// ********** БЛОК ДОСТАВКА ЦВЕТОВ В ВОРОНЕЖЕ ****************
+
+// ****************** SEARCH BLOCK *************************
+
+// ****************** SEARCH BLOCK *************************

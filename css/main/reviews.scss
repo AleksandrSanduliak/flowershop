@@ -1,0 +1,263 @@
+.reviews {
+    background: #F2F6F7;
+    padding-bottom: 30px;
+    font-family: 'TT Norms';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    &__inner {}
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 60px;
+        padding-bottom: 40px;
+
+        @media(max-width:1440px) {
+            padding-bottom: calc(20px + (40 - 20) * (100vw - 320.98px) / 880);
+        }
+
+        @media(max-width:650.98px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: center;
+        }
+
+        // @media(max-width:425.98px){
+        //     flex-wrap: wrap;
+        // }
+    }
+
+    &__cardlist {
+        display: block;
+        position: relative;
+
+        overflow: hidden;
+        // min-height: 500px;
+        // min-height: 512px;
+        min-height: 290px;
+
+        @media(max-width:1440px) {
+            height: calc(290px + (350 - 290) * (100vw - 581.98px) / 880);
+        }
+
+        @media(max-width:581.98px) {
+            height: calc(520px - (510 - 290) * (100vw - 320.98px) / 880);
+        }
+    }
+
+    &__body {
+        opacity: 0;
+        box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'TT Norms';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 50px 40px;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        @media(max-width:1440px) {
+            padding-top: calc(40px + (50 - 40) * (100vw - 768.98px) / 880);
+            padding-bottom: calc(40px + (50 - 40) * (100vw - 768.98px) / 880);
+            padding-right: calc(30px + (40 - 30) * (100vw - 768.98px) / 880);
+            padding-left: calc(30px + (40 - 30) * (100vw - 768.98px) / 880);
+        }
+
+        @media(max-width:768.98px) {
+            font-size: 14px;
+            padding-top: calc(28px + (40 - 28) * (100vw - 320.98px) / 880);
+            padding-bottom: calc(28px + (40 - 28) * (100vw - 320.98px) / 880);
+            padding-right: calc(26px + (30 - 26) * (100vw - 320.98px) / 880);
+            padding-left: calc(26px + (30 - 26) * (100vw - 320.98px) / 880);
+        }
+
+        @media(max-width:581.98px) {
+            flex-wrap: wrap;
+        }
+
+        &--wrapper {
+            text-align: left;
+            max-width: 808px;
+
+            @media(max-width:650.98px) {
+                margin-bottom: 15px;
+            }
+
+            @media(max-width:425.98px) {
+                flex: 0 0 100%;
+            }
+        }
+
+        &--name,
+        &--content,
+        &--desqr {
+            display: flex;
+        }
+
+        &--name {
+            font-family: 'TT Norms medium';
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 26px;
+            color: var(--link);
+            margin-bottom: 15px;
+
+            @media(max-width:1440px) {
+                margin-bottom: calc(5px + (15 - 5) * (100vw - 768.98px) / 880);
+            }
+
+            @media(max-width: 768.98px) {
+                margin-bottom: 10px;
+                font-size: 16px;
+                line-height: calc(22px - (26 - 22) * (100vw - 320px) / 880);
+            }
+        }
+
+        &--content {
+            margin-bottom: 40px;
+
+            @media(max-width:1440px) {
+                margin-bottom: calc(10px + (40 - 10) * (100vw - 768.98px) / 880);
+            }
+
+            @media(max-width:768.98px) {
+                margin-bottom: calc(15px - 10 * (100vw - 320px) / 880);
+                font-size: calc(14px - (16 - 14) * (100vw - 320px) / 880);
+                line-height: calc(20px - (26 - 20) * (100vw - 320px) / 880);
+            }
+
+            @media(max-width:319px) {
+                font-size: 13px;
+                line-height: 18px;
+            }
+        }
+        &--desqr{
+            @media(max-width:768.98px){
+                line-height: calc(20px - (22 - 20) * (100vw - 320px) / 880);
+            }
+        }
+
+        &--img {
+            margin-left: 10px;
+            max-width: 200px;
+            max-height: 200px;
+            outline: 1px solid #0093A2;
+            border: 7px solid white;
+            border-radius: 50%;
+
+            @media(max-width:1440px) {
+                width: calc(140px + (200 - 100) * (100vw - 320.98px) / 880);
+                height: calc(140px + (200 - 100) * (100vw - 320.98px) / 880);
+            }
+
+        }
+
+        &--flowertype {
+            color: #0093A2;
+        }
+    }
+
+    &__title {
+        padding-top: 0;
+        margin-bottom: 0;
+
+        @media(max-width:650.98px) {
+            // flex: 0 0 100%;
+            padding-bottom: calc(10px + (20 - 10) * (100vw - 320.98px) / 880);
+        }
+
+        @media(max-width:320px) {
+            padding-bottom: 10px;
+        }
+    }
+
+    &__btn {
+        cursor: pointer;
+        color: #0093A2;
+        border-radius: 5px;
+        border: 1px solid #0093A2;
+        padding: 13px 30px;
+        margin-top: 0.5rem;
+        background-color: white;
+
+        max-width: 178px;
+        max-height: 48px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+
+        @media(max-width:768.98px) {
+            margin-top: 0rem;
+            font-size: 16px;
+
+        }
+
+        // @media(max-width:650.98px) {
+        //     flex: 0 0 100%;
+        // }
+    }
+
+    &__allreviews {
+        border: none;
+        display: flex;
+        // justify-content: center;
+        margin: 30px auto 30px auto;
+    }
+
+    &__prewrap {
+        position: relative;
+    }
+
+    &__bottom {
+        position: relative;
+        // position: static;
+        left: 0;
+
+        opacity: 0;
+        visibility: hidden;
+        margin-left: -100%;
+        height: 0;
+        transition: all 2s;
+        max-width: 1140px;
+
+
+    }
+}
+
+.reviews__prewrap>.flowerCard__button--right {
+    // margin-right: -25px;
+    right: -13px;
+}
+
+.reviews__prewrap>.flowerCard__button--left {
+    // margin-left: -15px;
+    left: -13px;
+}
+
+.reviews__active {
+    opacity: 1;
+    visibility: visible;
+    margin-left: 0;
+    margin-bottom: 10px;
+    // height: auto;
+    // width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 35px;
+
+    }
+}

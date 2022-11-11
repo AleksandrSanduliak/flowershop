@@ -1,0 +1,105 @@
+.header {
+    &__bottom {
+        @media(max-width:425.98px) {
+            display: none;
+        }
+
+        &--nav {
+            overflow: hidden;
+            // padding-right: 8px;
+            width: 100%;
+        }
+
+        &--list {
+            width: 100%;
+            display: flex;
+
+            @media(max-width:991.98px) {
+                justify-content: space-between;
+            }
+            @media(max-width:850.98px){
+                flex-wrap: wrap;
+                justify-content: stretch;
+            }
+        }
+
+        &--item {
+            white-space: nowrap;
+            margin-right: 40px;
+            &:last-child{
+                margin-right: 0;
+            }
+            @media(max-width:991.98px){
+                margin-right: 0px;
+            }
+            @media(max-width:850.98px){
+                // margin-right: 20px;
+                // margin-right: 5px;
+                padding-right: 5px;
+            }
+
+            &:nth-child(n+7) img {
+                display: none;
+            }
+        }
+
+        &--link {
+            word-wrap: normal;
+        }
+    }
+}
+
+.bottom__nav {
+    display: none;
+
+    @media(max-width: 425.98px) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        display: flex;
+        align-self: flex-end;
+        justify-content: center;
+        z-index: 21;
+        flex: 1 0 100%;
+        width: 100%;
+    }
+
+    &--list {
+        display: flex;
+        padding: 10px 5px;
+        background-color: white;
+    }
+
+    &--item {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-right: 2px;
+    }
+
+    &--icon {
+        flex: 0 0 24px;
+        margin-bottom: 4px;
+    }
+
+    &--text {
+        cursor: pointer;
+        flex: 1 1 100%;
+        text-align: center;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: var(--bottom-nav);
+
+        @media(max-width:300.98px) {
+            font-size: 10px;
+        }
+
+        &:hover,
+        &:active {
+            color: var(--hover-item);
+        }
+    }
+}

@@ -1,0 +1,119 @@
+.allnews {
+    font-family: 'TT Norms';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 60px;
+
+
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 60px;
+        margin-bottom: 30px;
+        flex-basis: 100%;
+
+
+        @media(max-width: 1440px) {
+            padding-top: calc(40px + 20 * (100vw - 320px) / 880);
+        }
+
+        @media(max-width: 768.98) {
+            margin-bottom: 18px;
+        }
+
+        &--text {
+            display: flex;
+            align-items: center;
+            color: #1B1C21;
+            font-weight: 800;
+            font-size: 14px;
+            line-height: 20px;
+
+        }
+
+        &--img {
+            margin-left: 10px;
+
+        }
+
+    }
+
+    &__title {
+        padding-bottom: 0;
+    }
+
+    &__cardwrapper {
+        height: 460px;
+
+        @media(max-width:768.98px) {
+            height: 411px;
+        }
+    }
+
+    &__cardlist {
+        display: flex;
+
+    }
+
+    &__card {
+        box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+        border-radius: 5px;
+        margin-right: 20px;
+        min-height: 432px;
+        position: relative;
+
+        @media(max-width: 768.98px) {
+            min-height: 380px;
+            width: calc(220px + (280 - 220) * (100vw - 320px) / 880);
+        }
+
+        &--img {
+            max-width: 377px;
+            max-height: 250px;
+
+            @media(max-width:768.98px) {
+                // min-width: 200px;
+                // width: 220px;
+                // width: 230px;
+                width: calc(220px + (280 - 220) * (100vw - 320px) / 880);
+                max-height: 350px;
+            }
+        }
+    }
+
+    &__text {
+        padding: 20px 20px;
+        max-width: 327px;
+        font-family: 'TT Norms';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+
+        @media(max-width:768.98px) {
+            padding: 2px 20px;
+        }
+
+        &--title {
+            font-family: 'TT Norms';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 10px;
+        }
+
+        &--date {
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 20px;
+            color: #7D818E;
+            font-size: 14px;
+            line-height: 20px;
+            // margin-top: 10px;
+        }
+    }
+}

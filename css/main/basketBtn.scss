@@ -1,0 +1,28 @@
+.basket {
+    flex: 0 1 130px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: var(--light-red);
+    padding: 12px 15px;
+    border-radius: 5px;
+    @media(max-width: 1100.98px){
+        font-size: 0px;
+        // display: block;
+        // flex-basis: 56px;
+        max-width: 53px
+    }
+    &:hover {
+        background-color: var(--light-red-hover);
+        transition: var(--fast-transit);
+    }
+
+    &__img {
+        margin-right: 10px;
+        @media(max-width: 991.98px){
+            margin: 0;
+        }
+        
+    }
+}

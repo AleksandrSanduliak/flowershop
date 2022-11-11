@@ -1,0 +1,30 @@
+[data-button-touch-right],
+[data-button-touch-left] {
+    @media(max-width: 768px) {
+        display: none;
+    }
+}
+
+[data-touch] {
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 19;
+}
+
+[data-touch-wrapper] {
+    cursor: pointer;
+    pointer-events: none;
+    position: absolute;
+    z-index: 19;
+    left: 0;
+    top: 0;
+    display: flex;
+    transform: translateX(0px);
+
+    @media(max-width:768.98px) {
+        transition: 0s;
+    }
+}

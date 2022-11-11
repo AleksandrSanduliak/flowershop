@@ -1,0 +1,32 @@
+.gallery {
+    background-color: white;
+    padding-bottom: 60px;
+
+    @media(max-width:1440px) {
+        padding-bottom: calc(40px + (60 - 40) * (100vw - 320px) / 880);
+    }
+
+    &__imglist {
+        min-height: 300px;
+        @media(max-width:768.98px){
+            min-height: calc(230px + (300 - 230) * (100vw - 320px) / 880);
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    &__item {
+        margin-right: 20px;
+        width: 278px;
+        @media(max-width:1440px) {
+            max-width: 278px;
+            width: calc(210px + 60 * (100vw - 320px) / 880);
+        }
+    }
+
+}

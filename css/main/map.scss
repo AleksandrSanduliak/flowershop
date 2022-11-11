@@ -1,0 +1,10 @@
+.map{
+    &__yandex{
+        width: 100%;
+        height: 500px;
+        // display: flex;
+        @media(max-width:565.98px){
+            height: 500px;
+        }
+    }
+}

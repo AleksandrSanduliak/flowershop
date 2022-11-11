@@ -1,0 +1,104 @@
+.sections {
+    background-color: #F2F6F7;
+    padding-bottom: 60px;
+
+    @media(max-width:1440px) {
+        padding-bottom: calc(40px + (60 - 40) * (100vw - 320px) / 880);
+    }
+
+    &__container {
+        color: var(--link);
+    }
+
+    &__listwrap {
+        display: block;
+        position: relative;
+        min-height: 370px;
+        @media(max-width:768.98px){
+            min-height: calc(300px + (370 - 300) * (100vw - 320px) / 880);
+        }
+    }
+
+    &__imglist {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__card {
+        display: inline-block;
+        background-color: white;
+        margin-right: 20px;
+        max-width: 278px;
+        border: none;
+        height: 100%;
+        padding-bottom: 20px;
+
+        @media(max-width:1440px) {
+            width: calc(210px + 60 * (100vw - 320px) / 880);
+            padding-bottom: calc(15px + (20 - 15) * (100vw - 320px) / 880);
+        }
+    }
+    &__image {
+        border-radius: 20% 20%;
+        border: none;
+    }
+
+    &__text {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 20px;
+
+        @media(max-width:1440px) {
+            padding-top: calc(15px + (20 - 15) * (100vw - 320px) / 880);
+        }
+    }
+
+    &__title {
+        display: inline-block;
+        padding-top: 60px;
+        margin-bottom: 30px;
+        font-family: 'Yeseva One';
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 50px;
+
+        @media(max-width:1440px) {
+            font-size: calc(20px + (40 - 20) * (100vw - 320px) / 880);
+            line-height: calc(30px + (50 - 30) * (100vw - 320px) / 880);
+            padding-top: calc(40px + (60 - 40) * (100vw - 320px) / 880);
+            margin-bottom: calc(20px + (30 - 20) * (100vw - 320px) / 880);
+        }
+    }
+
+    &__card--title {
+        margin-bottom: 10px;
+
+        @media(max-width:1440px) {
+            margin-bottom: calc(5px + (10 - 5) * (100vw - 320px) / 880);
+        }
+    }
+
+    &__card--title,
+    &__card--prefix {
+        font-family: 'TT Norms medium';
+        font-size: 20px;
+        line-height: 30px;
+        flex: 0 1 100%;
+    }
+
+    &__card--price {
+        font-family: 'TT Norms';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    &__card--prefix {
+        font-size: 16px;
+    }
+}

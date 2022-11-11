@@ -1,0 +1,75 @@
+.bouquets__title {
+  display: inline-block;
+  font-family: "Yeseva One";
+  color: var(--link);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+}
+.bouquets__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+.bouquets__sliderblock {
+  position: relative;
+  z-index: 15;
+  height: 460px;
+}
+@media (max-width: 1440px) {
+  .bouquets__sliderblock {
+    height: calc(400px + 70 * (100vw - 320px) / 880);
+  }
+}
+.bouquets__slider + .bouquets__slider {
+  margin-left: 1vw;
+}
+@media (max-width: 768px) {
+  .bouquets__slider + .bouquets__slider {
+    margin-left: 1.5vw;
+  }
+}
+.bouquets__preslider {
+  vertical-align: middle;
+  display: flex;
+  align-self: center;
+}
+.bouquets__slider {
+  width: 278px;
+  flex: 1 1;
+}
+@media (max-width: 1440px) {
+  .bouquets__slider {
+    max-width: 278px;
+    flex: 0 0;
+  }
+}
+@media (max-width: 768.98px) {
+  .bouquets__slider {
+    display: block;
+  }
+}
+.bouquets__cardtitle {
+  font-size: 16px;
+  line-height: 22px;
+  padding: 0px;
+  margin-bottom: 10px;
+  white-space: initial;
+}
+.bouquets__cardsubtitle {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-grey);
+  margin-bottom: 20px;
+  white-space: initial;
+}
+
+.edit {
+  display: flex;
+  overflow: hidden;
+}
+
+.bouquets__wrapper {
+  display: block;
+}/*# sourceMappingURL=bouquets.css.map */

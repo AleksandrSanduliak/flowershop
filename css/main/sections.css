@@ -1,0 +1,99 @@
+.sections {
+  background-color: #F2F6F7;
+  padding-bottom: 60px;
+}
+@media (max-width: 1440px) {
+  .sections {
+    padding-bottom: calc(40px + 20 * (100vw - 320px) / 880);
+  }
+}
+.sections__container {
+  color: var(--link);
+}
+.sections__listwrap {
+  display: block;
+  position: relative;
+  min-height: 370px;
+}
+@media (max-width: 768.98px) {
+  .sections__listwrap {
+    min-height: calc(300px + 70 * (100vw - 320px) / 880);
+  }
+}
+.sections__imglist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sections__card {
+  display: inline-block;
+  background-color: white;
+  margin-right: 20px;
+  max-width: 278px;
+  border: none;
+  height: 100%;
+  padding-bottom: 20px;
+}
+@media (max-width: 1440px) {
+  .sections__card {
+    width: calc(210px + 60 * (100vw - 320px) / 880);
+    padding-bottom: calc(15px + 5 * (100vw - 320px) / 880);
+  }
+}
+.sections__image {
+  border-radius: 20% 20%;
+  border: none;
+}
+.sections__text {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 20px;
+}
+@media (max-width: 1440px) {
+  .sections__text {
+    padding-top: calc(15px + 5 * (100vw - 320px) / 880);
+  }
+}
+.sections__title {
+  display: inline-block;
+  padding-top: 60px;
+  margin-bottom: 30px;
+  font-family: "Yeseva One";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+}
+@media (max-width: 1440px) {
+  .sections__title {
+    font-size: calc(20px + 20 * (100vw - 320px) / 880);
+    line-height: calc(30px + 20 * (100vw - 320px) / 880);
+    padding-top: calc(40px + 20 * (100vw - 320px) / 880);
+    margin-bottom: calc(20px + 10 * (100vw - 320px) / 880);
+  }
+}
+.sections__card--title {
+  margin-bottom: 10px;
+}
+@media (max-width: 1440px) {
+  .sections__card--title {
+    margin-bottom: calc(5px + 5 * (100vw - 320px) / 880);
+  }
+}
+.sections__card--title, .sections__card--prefix {
+  font-family: "TT Norms medium";
+  font-size: 20px;
+  line-height: 30px;
+  flex: 0 1 100%;
+}
+.sections__card--price {
+  font-family: "TT Norms";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+.sections__card--prefix {
+  font-size: 16px;
+}/*# sourceMappingURL=sections.css.map */

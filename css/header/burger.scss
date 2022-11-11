@@ -1,0 +1,244 @@
+.burgers {
+    display: none;
+
+    @media (max-width:840.98px) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+}
+
+// ************************************* BURGER CLOSE STYLES ***************************
+.burger__close {
+    @media (max-width: 840.98px) {
+        width: 24px;
+        height: 24px;
+        display: inline;
+        width: 2rem;
+        background-color: inherit;
+        position: relative;
+        z-index: 28;
+        right: 0;
+    }
+}
+
+.line__close {
+
+    @media (max-width: 840.98px) {
+        position: absolute;
+        top: 0;
+        right: 5%;
+        margin-top: 0.5rem;
+        line-height: 2rem;
+        width: 100%;
+        height: 100%;
+        background-image: url(/assets/icons/crosshair.png);
+        background-repeat: no-repeat;
+    }
+}
+
+// ************************************* BURGER CLOSE STYLES ***************************
+
+// ********************************** BURGER OPEN STYLES ************************************
+.burger {
+    display: none;
+    z-index: 15;
+    background-color: inherit;
+
+    @media (max-width: 840.98px) {
+        display: block;
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+    }
+
+    &__top-text {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 75vw;
+
+        @media(max-width:340.98px) {
+            width: 90vw;
+        }
+    }
+
+    &__top {
+        display: none;
+
+        @media(max-width:840.98px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-left: 2%;
+            padding-right: 2%;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border--cl);
+        }
+
+    }
+
+    &__top--img {
+        flex: 0 0 22px;
+        height: 100%;
+    }
+
+    &__clocks {
+        display: none;
+
+        @media (max-width:840.98px) {
+            display: block;
+            margin-left: 2%;
+            margin-top: 0.2rem;
+            display: flex;
+            justify-self: flex-start;
+        }
+
+        @media(max-width:300.98px) {
+            font-size: 12px;
+        }
+    }
+
+}
+
+.line {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    line-height: 1rem;
+    width: 18px;
+    height: 2px;
+    background-color: var(--text);
+    border-radius: 20%;
+    margin-top: 3px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 2px;
+        background-color: var(--text);
+        border-radius: 20%;
+        margin-top: 6px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 2px;
+        background-color: var(--text);
+        border-radius: 20%;
+        margin-top: 12px;
+    }
+}
+
+// ********************************** BURGER OPEN STYLES ************************************
+.active {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    background-color: white;
+
+    transition: var(--ease-transit);
+    font-size: 14px;
+    opacity: 1;
+
+    z-index: 100;
+
+    visibility: visible;
+    overflow-y: auto;
+}
+
+// **************** ADD BURGER ITEMS WHEN CLIENT CLICK **********************
+
+.brgimage {
+    margin-right: 0.72rem;
+}
+
+.bgSocial {
+    margin-right: 1.45rem;
+}
+
+.social__wrapper {
+    display: none;
+
+    @media(max-width:840.98px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 1 100%;
+        margin-left: 1.45rem;
+        margin-bottom: 56px;
+        padding-bottom: 25px;
+    }
+}
+
+.social__wrapper--head {
+    flex: 1 1 100%;
+    margin-bottom: 1.1rem;
+    font-size: 16px;
+}
+
+// **************** ADD BURGER ITEMS WHEN CLIENT CLICK **********************
+#firstmenu {
+    display: block;
+
+    @media(max-width: 840.98px) {
+        display: none;
+    }
+}
+
+#burgermenu {
+    display: none;
+
+    @media(max-width:840.98px) {
+        display: block;
+    }
+}
+
+.burgercontact {
+    display: none;
+
+    @media(max-width:840.98px) {
+        display: block;
+        margin-left: 1.45rem;
+
+        &:not(:last-child) {
+            margin-bottom: 1.1rem;
+        }
+
+        &:last-child {
+            margin-bottom: 2.2rem;
+
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: "TT Norms";
+        color: #1B1C21;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        width: 16rem;
+
+    }
+
+}

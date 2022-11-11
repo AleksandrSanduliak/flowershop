@@ -1,0 +1,35 @@
+.order {
+  padding: 14px 0;
+  background-color: #FF8642;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 425.98px) {
+  .order {
+    font-size: 14px;
+  }
+}
+.order__container {
+  display: flex;
+  align-items: center;
+}
+.order__wrap {
+  margin: 0 auto;
+}
+.order__img {
+  cursor: pointer;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.orderTog {
+  width: 0;
+  opacity: 0;
+  height: 0;
+  padding: 0;
+}/*# sourceMappingURL=order.css.map */

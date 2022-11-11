@@ -1,0 +1,116 @@
+// **************** FONTS ********************
+@font-face {
+    font-family: 'TT Norms';
+    src: local('TT Norms Regular'), local('TTNorms-Regular'),
+        url('/fonts/TTNorms-Regular.woff2') format('woff2'),
+        url('/fonts/TTNorms-Regular.woff') format('woff'),
+        url('/fonts/TTNorms-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms medium';
+    src: local('TT Norms Bold'), local('TTNorms-Bold'),
+        url('/fonts/TTNorms-Bold.woff2') format('woff2'),
+        url('/fonts/TTNorms-Bold.woff') format('woff'),
+        url('/fonts/TTNorms-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: local('TT Norms Medium'), local('TTNorms-Medium'),
+        url('/fonts/TTNorms-Medium.woff2') format('woff2'),
+        url('/fonts/TTNorms-Medium.woff') format('woff'),
+        url('/fonts/TTNorms-Medium.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yeseva One';
+    src: local('YesevaOne Regular'), local('YesevaOne-Regular'),
+        url('/fonts/YesevaOne-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+// ************************************** FONTS **************************************
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+html,
+body {
+    font-family: 'TT Norms';
+    font-weight: 400;
+    font-size: 14px;
+    height: 100%;
+    line-height: 20px;
+    font-size: 14px;
+
+    @media (max-width:320.98px) {
+        font-size: 11px;
+    }
+}
+h1, h2, h3, h4, h5, h6{
+    padding: 0;
+    margin: 0;
+}
+[class*="_container"] {
+    max-width: 1175px;
+    padding: 0 1.25rem;
+    margin: 0 auto;
+
+    @media (max-width: 1175.98px) {
+        max-width: 991px;
+    }
+
+    @media (max-width: 840.98px) {
+        max-width: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+// VARS
+:root {
+    --header-bcg: #F2F3F5;
+    --text: #1B1C21;
+    --text-grey: #505567;
+    --border--cl: #E2E4EB;
+    --seo-text: #353949;
+    --ease-transit: all 1.5s ease;
+    --fast-transit: all 0.5s ease;
+    --link: #222A46;
+    --hover: #0093A2;
+
+    --light-red: #E2195B;
+    --light-red-hover: #E2183B;
+    --bottom-nav: #7D818E;
+    --hover-item: #0093A2;
+}

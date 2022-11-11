@@ -1,0 +1,121 @@
+.seo {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  padding-bottom: 60px;
+}
+.seo__container {
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.seo__title {
+  font-size: 40px;
+  line-height: 50px;
+}
+@media (max-width: 1440px) {
+  .seo__title {
+    font-size: calc(30px + 10 * (100vw - 320px) / 880);
+    line-height: calc(40px + 10 * (100vw - 320px) / 880);
+  }
+}
+@media (max-width: 768.98px) {
+  .seo__title {
+    font-size: calc(20px + 10 * (100vw - 320px) / 880);
+    line-height: calc(30px + 10 * (100vw - 320px) / 880);
+  }
+}
+.seo__text {
+  max-width: 873px;
+  color: var(--seo-text);
+}
+@media (max-width: 1440px) {
+  .seo__text {
+    max-width: calc(524px + 349 * (100vw - 768.98px) / 880);
+  }
+}
+@media (max-width: 768.98px) {
+  .seo__text {
+    font-size: calc(16px + 2 * (100vw - 320px) / 880);
+    line-height: calc(22px + 4 * (100vw - 320px) / 880);
+  }
+}
+.seo__text--title {
+  margin-bottom: 20px;
+}
+.seo__list {
+  margin-left: 26px;
+  font-size: inherit;
+  line-height: inherit;
+}
+@media (max-width: 768.98px) {
+  .seo__list {
+    margin-left: 14px;
+  }
+}
+.seo__item {
+  list-style-type: disc;
+  margin-bottom: 15px;
+}
+.seo__item:last-child {
+  margin-bottom: 0px;
+}
+.seo__images--wrapper {
+  position: absolute;
+  right: 12rem;
+  top: 35%;
+  z-index: 6;
+  width: 178px;
+  height: 178px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #F2F6F7;
+  box-shadow: 0px 15px 30px rgba(34, 42, 70, 0.3);
+}
+@media (max-width: 1440px) {
+  .seo__images--wrapper {
+    right: calc(70px + 230 * (100vw - 768.98px) / 880);
+    width: calc(130px + 48 * (100vw - 768.98px) / 880);
+    height: calc(130px + 48 * (100vw - 768.98px) / 880);
+  }
+}
+@media (max-width: 768px) {
+  .seo__images--wrapper {
+    opacity: 0.3;
+    right: 0;
+    top: 0;
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 555.98px) {
+  .seo__images--wrapper {
+    display: none;
+  }
+}
+.seo__images--logo {
+  vertical-align: middle;
+}
+.seo__images--bcg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+@media (max-width: 1440px) {
+  .seo__images--bcg {
+    right: calc(-90px + 200 * (100vw - 768.98px) / 880);
+  }
+}
+@media (max-width: 768px) {
+  .seo__images--bcg {
+    right: 0;
+    top: 0;
+    opacity: 0.5;
+  }
+}/*# sourceMappingURL=seo.css.map */

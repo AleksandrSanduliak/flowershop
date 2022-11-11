@@ -1,0 +1,331 @@
+.header {
+  width: 100%;
+  overflow: hidden;
+}
+.header__top {
+  background-color: var(--header-bcg);
+  padding: 0.9375rem 0;
+}
+.header__inner {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  width: 100%;
+}
+.header__right {
+  width: 14vw;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 840.98px) {
+  .header__right {
+    width: 80%;
+  }
+}
+.header__times {
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 1.5625rem;
+}
+@media (max-width: 840.98px) {
+  .header__times {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0px;
+    margin: 0;
+    transform: translateY(-250%);
+    z-index: 17;
+  }
+}
+.header__times--map {
+  display: flex;
+  align-items: center;
+}
+.header__clock-text {
+  color: var(--text);
+  white-space: nowrap;
+}
+.header-clocks {
+  display: inline-block;
+  margin-bottom: 0.2125rem;
+  margin-right: 0.625rem;
+  width: 23px;
+}
+.header__social {
+  margin-top: 0.3rem;
+  display: flex;
+}
+.header__social--link {
+  width: 24px;
+}
+.header__social--link:first-child {
+  margin-right: 1.08rem;
+}
+.header__social--link:last-child {
+  margin-right: 1.875rem;
+}
+@media (max-width: 991.98px) {
+  .header__social--link:last-child {
+    margin-right: 1.45rem;
+  }
+}
+.header__cabinet {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex: 1 0 auto;
+}
+@media (max-width: 840.98px) {
+  .header__cabinet {
+    display: none;
+  }
+}
+.header__cabinet--image {
+  margin-right: 0.8313rem;
+}
+.header__phone {
+  display: none;
+}
+@media (max-width: 840.98px) {
+  .header__phone {
+    margin-top: 0.3rem;
+    display: flex;
+    flex: 0 0 30px;
+    align-items: center;
+  }
+}
+
+.header__middle {
+  background-color: white;
+  box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+  width: 100%;
+}
+.header__wrapper--middle {
+  display: flex;
+  align-items: center;
+  padding: 0.93rem 0;
+  width: 100%;
+}
+@media (max-width: 991.98px) {
+  .header__wrapper--middle {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 768.98px) {
+  .header__wrapper--middle {
+    justify-content: space-around;
+    justify-content: space-between;
+  }
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  margin-right: 1.45rem;
+  order: 1;
+}
+.header__img {
+  display: block;
+}
+.header__logo--text {
+  margin-left: 0.55rem;
+}
+.header__contacts {
+  display: flex;
+  align-items: center;
+  flex: 1 1 227px;
+  margin-right: 30px;
+  order: 5;
+}
+@media (max-width: 1175.98px) {
+  .header__contacts {
+    flex: 0 0 auto;
+    order: 2;
+  }
+}
+@media (max-width: 768.98px) {
+  .header__contacts {
+    display: none;
+  }
+}
+.header__contacts--contmenu {
+  margin-bottom: 20px;
+}
+.header__contacts--contmenu:nth-child(1) {
+  color: #0093A2;
+}
+.header__contacts--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 168px;
+}
+@media (max-width: 1175.98px) {
+  .header__contacts--wrap {
+    display: none;
+    width: 0;
+    flex-basis: 0;
+  }
+}
+.header__contacts--link {
+  margin-right: 10px;
+}
+.header__contacts--img {
+  flex: 0 0;
+  width: 44px;
+  display: flex;
+  align-self: center;
+}
+.header__contacts--tel {
+  flex: 1 0 170px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "TT Norms medium";
+  color: var(--link);
+  display: flex;
+  flex-wrap: wrap;
+}
+.header__contacts--wraptel {
+  flex: 1 1 100%;
+}
+.header__contacts--text {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--light-red);
+  padding-bottom: 5px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--light-red);
+}
+.header__contacts--drop {
+  position: absolute;
+  z-index: 25;
+  display: block;
+  visibility: hidden;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  max-width: 300px;
+  opacity: 0;
+  flex-direction: column;
+  border: 1px solid #F2F3F5;
+  box-shadow: 0px 10px 30px rgba(34, 42, 70, 0.1);
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+  transition: var(--ease-transit);
+}
+.header__contacts--drop:first-child {
+  margin-bottom: 20px;
+}
+.header__liked {
+  margin-right: 20px;
+  flex: 1 0 44px;
+  order: 6;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 768.98px) {
+  .header__liked {
+    display: none;
+  }
+}
+.header__liked--img {
+  display: flex;
+  align-self: center;
+}
+.header__card {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  order: 7;
+  flex: 0 0 auto;
+  justify-content: flex-end;
+}
+@media (max-width: 768.98px) {
+  .header__card {
+    display: none;
+  }
+}
+.header__card--img {
+  margin-right: 14px;
+  display: flex;
+  align-self: center;
+}
+@media (max-width: 1440px) {
+  .header__card--img {
+    margin-right: calc(24px - 10 * (100vw - 320px) / 880);
+  }
+}
+.header__bottom {
+  padding: 19px 0;
+  background-color: white;
+  box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+}
+@media (max-width: 768.98px) {
+  .header__bottom--nav {
+    max-width: 500px;
+  }
+}
+.header__bottom--wrapper {
+  display: flex;
+  align-items: center;
+}
+.header__bottom--title {
+  display: flex;
+  align-items: center;
+  margin-right: 41px;
+}
+@media (max-width: 991.98px) {
+  .header__bottom--title {
+    margin-right: 30px;
+  }
+}
+.header__bottom--stock {
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+.header__bottom--img {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.delivery__text {
+  width: 30vw;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text);
+}
+@media (max-width: 375.98px) {
+  .delivery__text {
+    font-size: 12px;
+  }
+}
+.delivery__text--top {
+  margin-left: 15px;
+}
+.delivery__middleHeader {
+  order: 2;
+  margin-right: 1.16rem;
+}
+@media (max-width: 991.98px) {
+  .delivery__middleHeader {
+    display: none;
+  }
+}
+
+.lightred__block {
+  font-family: "TT Norms medium";
+  flex: 0 0 auto;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--light-red);
+}
+
+.arrow {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}/*# sourceMappingURL=header.css.map */

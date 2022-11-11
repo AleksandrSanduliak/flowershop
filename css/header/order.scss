@@ -1,0 +1,33 @@
+.order{
+    padding: 14px 0;
+    background-color: #FF8642;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 1;
+    visibility: visible;
+    @media(max-width: 425.98px){
+        font-size: 14px;
+    }
+    
+    &__container{
+        display: flex;
+        align-items: center;
+    }
+    &__wrap{
+       margin: 0 auto;
+    }
+    &__img{
+        cursor: pointer;
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+}
+.orderTog{
+    width: 0;
+    opacity: 0;
+    height: 0;
+    padding: 0;
+}

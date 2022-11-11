@@ -1,0 +1,146 @@
+.flowerCard {
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--link);
+  height: auto;
+  position: relative;
+  max-width: 278px;
+}
+.flowerCard__inner {
+  position: relative;
+  border: 1px solid #E2E4EB;
+  border-radius: 3%;
+  max-width: 280px;
+}
+@media (max-width: 1440.98px) {
+  .flowerCard__inner {
+    width: calc(210px + 60 * (100vw - 320px) / 880);
+  }
+}
+.flowerCard__title {
+  font-family: "TT Norms medium";
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.flowerCard__img {
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+}
+.flowerCard__bot {
+  padding: 20px 20px 24px 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.flowerCard__bot--title {
+  font-family: "TT Norms medium";
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+  height: 37px;
+  flex: 0 0 100%;
+}
+@media (max-width: 1300.98px) {
+  .flowerCard__bot--title {
+    white-space: normal;
+  }
+}
+@media (max-width: 1010.98px) {
+  .flowerCard__bot--title {
+    width: calc(16px + 2 * (100vw - 320px) / 880);
+    margin-bottom: 15px;
+  }
+}
+.flowerCard__bot--wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.flowerCard__price {
+  display: block;
+  flex: 0 1 45%;
+}
+.flowerCard__price--actual {
+  font-family: "TT Norms medium";
+  font-weight: 700;
+}
+.flowerCard__price--old {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #B0B2B9;
+}
+.flowerCard__item {
+  display: flex;
+  height: 250px;
+  position: relative;
+}
+@media (max-width: 1440px) {
+  .flowerCard__item {
+    height: calc(190px + 60 * (100vw - 320px) / 880);
+  }
+}
+@media (max-width: 320px) {
+  .flowerCard__item {
+    height: 170;
+  }
+}
+.flowerCard__li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 1s ease;
+  height: inherit;
+}
+.flowerCard__li:first-child {
+  opacity: 1;
+}
+@media (max-width: 1440px) {
+  .flowerCard__li {
+    height: inherit;
+  }
+}
+.flowerCard__img {
+  display: block;
+  height: inherit;
+}
+.flowerCard__button {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+}
+.flowerCard__button--left {
+  left: 5px;
+}
+.flowerCard__button--right {
+  right: 5px;
+}
+
+.block {
+  opacity: 1;
+  transition: all 0.8s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.activedot {
+  cursor: pointer;
+  opacity: 1;
+}/*# sourceMappingURL=flowerCard.css.map */

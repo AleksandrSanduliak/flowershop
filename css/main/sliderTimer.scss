@@ -1,0 +1,213 @@
+.slider {
+    color: var(--link);
+
+    &__wrapper {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        @media(max-width: 768.98px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__right {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        margin-right: 10px;
+
+        @media(max-width:768.98px) {
+            margin: 0;
+        }
+    }
+
+    &__bcg {
+        position: relative;
+        overflow: hidden;
+        height: 440px;
+
+        &--image {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 19;
+            background-image: url(/assets/icons/sliderTimer/bcg2.png);
+
+            @media(max-width:768.98px) {
+                height: calc(250px + (440 - 200) * ((100vw - 320px) / 880));
+            }
+        }
+    }
+
+    &__img {
+        height: 440px;
+        border-radius: 10px;
+        object-fit: cover;
+
+        &--contain {
+            object-fit: contain;
+        }
+
+        @media(max-width:768.98px) {
+            height: calc(250px + (440 - 200) * ((100vw - 320px) / 880));
+        }
+
+    }
+
+    &__btn {
+        background: #0093A2;
+        opacity: 0.8;
+        border-radius: 0px 10px 10px 0px;
+        padding: 10px;
+
+        &--img {
+            display: inline;
+        }
+    }
+
+    &__about {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        z-index: 20;
+
+        @media(max-width:768.98px) {
+            left: 20%;
+            top: 11%;
+        }
+    }
+
+    &__input {
+        border: none;
+        padding: 14px 0px;
+        background-color: #ffff;
+        color: var(--light-red);
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        font-family: 'TT Norms medium';
+        font-weight: 700;
+        box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+        border-radius: 10px 0px 0px 10px;
+
+        @media(max-width:768.98px) {}
+
+        &--wrapper {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 27;
+        }
+    }
+
+    &__text {
+        font-family: 'Yeseva One';
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 56px;
+        display: flex;
+        max-width: 307px;
+        margin-bottom: 10px;
+
+        @media(max-width: 1440.98px) {
+
+            font-size: 20px;
+            // font-size: calc(20px + (16 + 16 * 0.7) * ((100vw - 320px) / 1175));
+            font-size: calc(20px + (44 - 20) * ((100vw - 320px) / 880));
+            line-height: 30px;
+            line-height: calc(30px + (56 - 35) * ((100vw - 320px) / 880));
+            // max-width: 224px;
+        }
+    }
+
+    &__promo {
+        display: flex;
+        flex: 0 0 100%;
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 10px;
+
+        @media(max-width: 768.98px) {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 5px;
+        }
+    }
+
+    //  SLIDER 
+    &__wrap {
+        display: flex;
+        width: 100%;
+        height: 440px;
+
+        @media(max-width:768.98px) {
+            height: calc(250px + (440 - 200) * ((100vw - 320px) / 880));
+        }
+    }
+
+    &__item {
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        transition: all 1s ease;
+    }
+}
+
+.dot {
+
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    background: #FFFFFF;
+    opacity: 0.5;
+    border: none;
+    border-radius: 50%;
+
+    // position: relative;
+    // z-index: 150;
+
+    &:not(:last-child) {
+        margin-right: 5px;
+    }
+}
+
+.lines__slider {
+    z-index: 10;
+    bottom: 5%;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    align-self: flex-end;
+}
+.dots {
+    display: inline-flex;
+    position: relative;
+    z-index: 19;
+    bottom: 5%;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    align-self: flex-end;
+
+    @media(max-width: 1440px) {
+        bottom: 7%;
+    }
+}
+.line__slider {
+    cursor: pointer;
+    width: 40px;
+    height: 5px;
+    background: #e00a0a;
+    opacity: 0.6;
+    margin-right: 10px;
+    border-radius: 0;
+    border: none;
+}
+
