@@ -42,6 +42,7 @@ function init(){
         iconContentOffset: [15, 15],
         // Макет содержимого.
         iconContentLayout: MyIconContentLayout
+        // layout
     });
 
 map.geoObjects
