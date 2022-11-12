@@ -77,23 +77,23 @@ document.querySelector('.header__bottom--list').insertAdjacentHTML('beforeend', 
 let getBottomNav = document.querySelector('.bottom__nav--list')
 
 navBotFixed = [{
-    img: '/assets/icons/bottomNav/main.svg',
+    img: '../assets/icons/bottomNav/main.svg',
     text: 'Главная',
 },
 {
-    img: '/assets/icons/bottomNav/Search.svg',
+    img: '../assets/icons/bottomNav/Search.svg',
     text: 'Каталог',
 },
 {
-    img: '/assets/icons/bottomNav/shopping-basket.svg',
+    img: '../assets/icons/bottomNav/shopping-basket.svg',
     text: 'Корзина',
 },
 {
-    img: '/assets/icons/bottomNav/favorite.svg',
+    img: '../assets/icons/bottomNav/favorite.svg',
     text: 'Избранное',
 },
 {
-    img: '/assets/icons/bottomNav/order.svg',
+    img: '../assets/icons/bottomNav/order.svg',
     text: 'Мои заказы',
 },
 ]

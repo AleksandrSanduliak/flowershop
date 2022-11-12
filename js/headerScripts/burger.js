@@ -53,22 +53,22 @@ document.querySelector('.burger__top--img').setAttribute('src', burgerText.clock
 
 let butgercontact = [{
         text: '+7 (920) 211-49-03',
-        src: '/assets/icons/Call.svg',
+        src: '../assets/icons/Call.svg',
         link: '#',
     },
     {
         text: 'ул. Революции 1905 года 80',
-        src: '/assets/icons/map.svg',
+        src: '../assets/icons/map.svg',
         link: '#',
     },
     {
         text: 'ул. Вл. Невского 17',
-        src: '/assets/icons/map.svg',
+        src: '../assets/icons/map.svg',
         link: '#',
     },
     {
         text: 'info@lavkaroz.ru',
-        src: '/assets/icons/mail.svg',
+        src: '../assets/icons/mail.svg',
         link: '#',
         last: 'burger__contact--last',
         
@@ -94,19 +94,19 @@ const listContacts = document.createElement('ul')
 listContacts.insertAdjacentHTML('beforeend', makeCont)
 
 const social = [{
-        src: '/assets/icons/media/WhatsApp.svg',
+        src: '../assets/icons/media/WhatsApp.svg',
         link: 'whatsapp.com',
     },
     {
-        src: '/assets/icons/media/Telegram.svg',
+        src: '../assets/icons/media/Telegram.svg',
         link: 'telegram.com',
     },
     {
-        src: '/assets/icons/media/VK.svg',
+        src: '../assets/icons/media/VK.svg',
         link: 'vk.com',
     },
     {
-        src: '/assets/icons/media/Instagram.svg',
+        src: '../assets/icons/media/Instagram.svg',
         link: 'instagram.com',
     },
 ]
