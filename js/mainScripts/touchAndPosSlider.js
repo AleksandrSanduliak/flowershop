@@ -4,8 +4,8 @@ const maxW768 = window.matchMedia("(max-width: 768px)")
 const touchBtn = document.querySelectorAll('[data-touch-btns]')
 touchBtn.forEach(e => {
 
-    const arrows = `<button data-button-touch-left class="flowerCard__button flowerCard__button--left"><img src="/assets/icons/arrows/left-arrow.svg" alt="left arrow" class="flowerCard__arrow flowerCard__arrow--left"></button>
-    <button data-button-touch-right class="flowerCard__button flowerCard__button--right"><img src="/assets/icons/arrows/right-arrow.svg" alt="right arrow" class="flowerCard__arrow flowerCard__arrow--right"></button>`
+    const arrows = `<button data-button-touch-left class="flowerCard__button flowerCard__button--left"><img src="../assets/icons/arrows/left-arrow.svg" alt="left arrow" class="flowerCard__arrow flowerCard__arrow--left"></button>
+    <button data-button-touch-right class="flowerCard__button flowerCard__button--right"><img src="../assets/icons/arrows/right-arrow.svg" alt="right arrow" class="flowerCard__arrow flowerCard__arrow--right"></button>`
 
     e.insertAdjacentHTML('beforeend', arrows)
 
