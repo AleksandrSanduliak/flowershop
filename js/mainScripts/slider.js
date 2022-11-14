@@ -43,7 +43,7 @@ function init_slider(slider) {
     })
     let sliderWrapper = slider.querySelector('[data-dots]')
     let sliderLineWrap = slider.querySelector('[data-lines]')
-if (sliderWrapper){
+    if (sliderWrapper){
     const insertDots = () => {
         let str = ''
         for (let b = 0; b < slide.length; b++) {
@@ -53,7 +53,7 @@ if (sliderWrapper){
         sliderWrapper.insertAdjacentHTML('beforeend', ulWrap)
     }
     insertDots()
-} else if(sliderLineWrap){
+    } else if(sliderLineWrap){
     const insertLines = () => {
         
         let str = ''
@@ -64,7 +64,7 @@ if (sliderWrapper){
         sliderLineWrap.insertAdjacentHTML('beforeend', ulWrap)
     }
     insertLines()
-}
+    }
 
     let dots = slider.querySelectorAll('.dot')
     dots.forEach((ev, index) => {
@@ -96,6 +96,30 @@ if (sliderWrapper){
             dots[i].classList.add('activedot')
         })
     }
+
+    function intervalTimer(){
+        const getTimerWrap = document.querySelector('[data-timer]')
+        let wrapItems = getTimerWrap.querySelectorAll('[data-timer-items]')
+        i++
+        wrapItems[0].style.opacity = '0'
+        if(i >= wrapItems.length){
+            wrapItems[0].style.opacity = '0'
+            wrapItems[i - 1].classList.remove("block")
+            i = 0
+            wrapItems[i].classList.add("block")
+            wrapItems[0].style.opacity = '1'
+            console.log(i)
+            
+        } else{
+            wrapItems[i - 1].classList.remove("block")
+            wrapItems[i].classList.add("block")
+            console.log(i)
+        }
+        console.log(i)
+    
+    }
+    setInterval(intervalTimer, 4000)
+
 
     if(next){
         next.addEventListener('click', function () {
@@ -139,3 +163,4 @@ if (sliderWrapper){
     }
 
 }
+
