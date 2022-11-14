@@ -24,7 +24,7 @@ let burgerText = {
 </ul></li>
     <li class="menu__list"><a href="#" class="menu__item" data-scroll>Контакты</a></li>
 </ul>`,
-    clockImg: '/assets/icons/header-clocks.png',
+    clockImg: '../assets/icons/header-clocks.png',
 }
 /* <img class="menu__list--arrow" src="/assets/icons/header-arrow.svg" alt="Info arrow"> */
 let burgerMenu = {
