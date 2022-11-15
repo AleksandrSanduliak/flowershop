@@ -16,14 +16,11 @@ getAllImgs.forEach(e => {
 
 
 // ********************************************** insert flowercard images **************************************
-
     const getUl = document.querySelector('.flowerCard__item')
     console.log(getUl)
     const flowercardLi = (imgList) => `<li ${imgList.current} class="flowerCard__li" ><img src="${imgList.link}" alt="Фото роз" class="flowerCard__img" ></li>`
     const insertUl = imgList.map(ev => flowercardLi(ev)).join('')
     getUl.insertAdjacentHTML('afterbegin', insertUl)
-
-
 // ********************************************** insert flowercard images **************************************
 
 // ***************************************************** SLIDER FUNCTIONAL **************************************
@@ -94,36 +91,13 @@ function init_slider(slider) {
         dots.forEach(ev => {
             ev.classList.remove('activedot')
             dots[i].classList.add('activedot')
+            console.log(i)
         })
     }
 
-    function intervalTimer(){
-        const getTimerWrap = document.querySelector('[data-timer]')
-        let wrapItems = getTimerWrap.querySelectorAll('[data-timer-items]')
-        i++
-        wrapItems[0].style.opacity = '0'
-        if(i >= wrapItems.length){
-            wrapItems[0].style.opacity = '0'
-            wrapItems[i - 1].classList.remove("block")
-            i = 0
-            wrapItems[i].classList.add("block")
-            wrapItems[0].style.opacity = '1'
-            console.log(i)
-            
-        } else{
-            wrapItems[i - 1].classList.remove("block")
-            wrapItems[i].classList.add("block")
-            console.log(i)
-        }
-        console.log(i)
-    
-    }
-    setInterval(intervalTimer, 4000)
-
-
+    console.log(i)
     if(next){
         next.addEventListener('click', function () {
-        
             i++
             slide[0].style.opacity = '0'
             if (i >= slide.length) {
@@ -162,5 +136,32 @@ function init_slider(slider) {
         })
     }
 
+
+    const getTimerWrap = document.querySelector('[data-timer]')
+    let wrapItems = getTimerWrap.querySelectorAll('[data-timer-items]')
+    let blockWork = getTimerWrap.querySelectorAll('.block')
+    function intervalTimer(){
+        i++
+        wrapItems[0].style.opacity = '0'
+        if(i >= wrapItems.length){
+            wrapItems[0].style.opacity = '0'
+            wrapItems[i - 1].classList.remove("block")
+            i = 0
+            wrapItems[0].style.opacity = '1'
+            wrapItems[i].classList.add("block")
+        } else{
+            wrapItems[i - 1].classList.remove("block")
+            wrapItems[i].classList.add("block")
+        }
+
+        if(Number(blockWork.length) === 2){
+            wrapItems.forEach(e =>{
+                e.classList.remove('block')
+            })
+            console.log('классов > 2')
+            wrapItems[i].classList.add("block")
+        }
+    }
+    setInterval(intervalTimer, 5000)
 }
 
