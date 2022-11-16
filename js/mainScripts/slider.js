@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 import {
     imgList
 } from './flowerCard.js'
@@ -17,7 +17,6 @@ getAllImgs.forEach(e => {
 
 // ********************************************** insert flowercard images **************************************
     const getUl = document.querySelector('.flowerCard__item')
-    console.log(getUl)
     const flowercardLi = (imgList) => `<li ${imgList.current} class="flowerCard__li" ><img src="${imgList.link}" alt="Фото роз" class="flowerCard__img" ></li>`
     const insertUl = imgList.map(ev => flowercardLi(ev)).join('')
     getUl.insertAdjacentHTML('afterbegin', insertUl)
@@ -89,6 +88,10 @@ function init_slider(slider) {
     function activeDot() {
         const actDot = document.querySelector('.activedot')
         dots.forEach(ev => {
+
+            if(i >= 3){
+                i = 0
+            }
             ev.classList.remove('activedot')
             dots[i].classList.add('activedot')
             console.log(i)
@@ -97,7 +100,7 @@ function init_slider(slider) {
 
     console.log(i)
     if(next){
-        next.addEventListener('click', function () {
+        let nextClick = next.addEventListener('click', function () {
             i++
             slide[0].style.opacity = '0'
             if (i >= slide.length) {
@@ -111,12 +114,11 @@ function init_slider(slider) {
                 slide[i].classList.add("block")
             }
             activeDot()
-            console.log(i)
         })
     }
    
     if(back){
-        back.addEventListener('click', function () {
+       let backClick =  back.addEventListener('click', function () {
             i--
             if (i < 0) {
                 slide[0].style.opacity = '0'
@@ -134,34 +136,51 @@ function init_slider(slider) {
             activeDot()
             console.log(i)
         })
+        
     }
 
-
-    const getTimerWrap = document.querySelector('[data-timer]')
-    let wrapItems = getTimerWrap.querySelectorAll('[data-timer-items]')
-    let blockWork = getTimerWrap.querySelectorAll('.block')
     function intervalTimer(){
-        i++
-        wrapItems[0].style.opacity = '0'
-        if(i >= wrapItems.length){
-            wrapItems[0].style.opacity = '0'
-            wrapItems[i - 1].classList.remove("block")
-            i = 0
-            wrapItems[0].style.opacity = '1'
-            wrapItems[i].classList.add("block")
-        } else{
-            wrapItems[i - 1].classList.remove("block")
-            wrapItems[i].classList.add("block")
-        }
+        const getTimerWrap = document.querySelector('[data-timer]')
+        let wrapItems = getTimerWrap.querySelectorAll('[data-timer-items]')
+        let blockWork = getTimerWrap.querySelectorAll('.block')
 
-        if(Number(blockWork.length) === 2){
-            wrapItems.forEach(e =>{
-                e.classList.remove('block')
+            i++
+            wrapItems[0].style.opacity = '0'
+            if(i >= wrapItems.length){
+                wrapItems[0].style.opacity = '0'
+                wrapItems[i - 1].classList.remove("block")
+                i = 0
+                wrapItems[0].style.opacity = '1'
+                wrapItems[i].classList.add("block")
+            } else{
+                if(!wrapItems[i - 1]) return
+                wrapItems[i - 1].classList.remove("block")
+                wrapItems[i].classList.add("block")
+            }
+            const againDots = getTimerWrap.querySelector('.dots')
+            let allDots = againDots.querySelectorAll('.dot')
+            allDots.forEach(ev =>{
+                if(i >= 3){
+                    i = 0
+                }
+                ev.classList.remove('activedot')
+                allDots[i].classList.add('activedot')
+                console.log(i)
             })
-            console.log('классов > 2')
-            wrapItems[i].classList.add("block")
+
+        let doubleClassing = () =>{
+            if(Number(blockWork.length) === 2){
+                // wrapItems.forEach(ev =>{
+                //     ev.classList.remove('block')
+                // })
+                 wrapItems[i - 1].classList.remove("block")
+                 wrapItems[i].classList.add("block")
+            } else return 
         }
+        setInterval(doubleClassing, 5) 
+
+      
     }
-    setInterval(intervalTimer, 5000)
+    setInterval(intervalTimer, 4000)
 }
 
