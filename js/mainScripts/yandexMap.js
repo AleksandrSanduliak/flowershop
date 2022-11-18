@@ -55,6 +55,11 @@ map.geoObjects
     map.controls.remove('rulerControl') 
     map.controls.remove('button')
     map.controls.remove('listBox')
+
+    map.behaviors.disable('scrollZoom');
+    map.events.add('click', function () {
+        map.behaviors.enable('scrollZoom');
+    });
 }
 ymaps.ready(init);
 

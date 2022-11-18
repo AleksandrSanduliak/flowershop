@@ -161,16 +161,16 @@ function init_slider(slider) {
                 wrapItems[i].classList.add("block")
             }
             
-            const againDots = getTimerWrap.querySelector('.dots')
-            let allDots = againDots.querySelectorAll('.dot')
-            allDots.forEach(ev =>{
-                if(i >= 3){
-                    i = 0
-                }
-                ev.classList.remove('activedot')
-                allDots[i].classList.add('activedot')
-                console.log(i)
-            })
+            // const againDots = getTimerWrap.querySelector('.dots')
+            // let allDots = againDots.querySelectorAll('.dot')
+            // allDots.forEach(ev =>{
+            //     if(i >= 3){
+            //         i = 0
+            //     }
+            //     ev.classList.remove('activedot')
+            //     allDots[i].classList.add('activedot')
+            //     console.log(i)
+            // })
 
         let doubleClassing = () =>{
             if(Number(blockWork.length) === 2){

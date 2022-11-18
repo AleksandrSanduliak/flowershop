@@ -29,6 +29,7 @@
   height: 440px;
 }
 .slider__bcg--image {
+  pointer-events: none;
   position: absolute;
   top: -10px;
   left: 0;
@@ -38,7 +39,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 19;
-  background-image: url(../assets/icons/sliderTimer/bcg2.png);
+  background-image: url(/assets/icons/sliderTimer/bcg2.png);
 }
 @media (max-width: 768.98px) {
   .slider__bcg--image {
