@@ -146,17 +146,21 @@ function init_slider(slider) {
 
             i++
             wrapItems[0].style.opacity = '0'
-            if(i >= wrapItems.length){
-                wrapItems[0].style.opacity = '0'
-                wrapItems[i - 1].classList.remove("block")
-                i = 0
-                wrapItems[0].style.opacity = '1'
-                wrapItems[i].classList.add("block")
-            } else{
+            if(i>= wrapItems.length){
+                if(wrapItems){
+                    wrapItems[0].style.opacity = '0'
+                    wrapItems[i - 1].classList.remove("block")
+                    i = 0
+                    wrapItems[0].style.opacity = '1'
+                    wrapItems[i].classList.add("block")
+                }
+
+            }else{
                 if(!wrapItems[i - 1]) return
                 wrapItems[i - 1].classList.remove("block")
                 wrapItems[i].classList.add("block")
             }
+            
             const againDots = getTimerWrap.querySelector('.dots')
             let allDots = againDots.querySelectorAll('.dot')
             allDots.forEach(ev =>{
@@ -170,17 +174,12 @@ function init_slider(slider) {
 
         let doubleClassing = () =>{
             if(Number(blockWork.length) === 2){
-                // wrapItems.forEach(ev =>{
-                //     ev.classList.remove('block')
-                // })
-                 wrapItems[i - 1].classList.remove("block")
-                 wrapItems[i].classList.add("block")
+                if (!wrapItems[i - 1]) return
+                    wrapItems[i - 1].classList.remove("block")
+                    wrapItems[i].classList.add("block")
             } else return 
         }
         setInterval(doubleClassing, 5) 
-
-      
     }
-    setInterval(intervalTimer, 4000)
+    setInterval(intervalTimer, 7000)
 }
-
