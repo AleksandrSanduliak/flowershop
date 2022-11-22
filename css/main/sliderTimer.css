@@ -29,7 +29,6 @@
   height: 440px;
 }
 .slider__bcg--image {
-  pointer-events: none;
   position: absolute;
   top: -10px;
   left: 0;

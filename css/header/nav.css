@@ -26,7 +26,7 @@
   align-items: center;
   flex: 0 1 100%;
   flex-wrap: wrap;
-  position: relative;
+  overflow: visible;
 }
 @media (max-width: 840.98px) {
   .menu {
