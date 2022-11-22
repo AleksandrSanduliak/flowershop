@@ -79,7 +79,7 @@
 }
 
 input#after {
-  background-image: url(./assets/icons/search-Icon.svg);
+  background-image: url(../../assets/icons/search-Icon.svg);
   background-repeat: no-repeat;
   background-size: 2.5rem;
   text-indent: 20px;
