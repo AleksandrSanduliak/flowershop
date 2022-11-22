@@ -38,7 +38,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             z-index: 19;
-            background-image: url(/assets/icons/sliderTimer/bcg2.png);
+            background-image: url(../../assets/icons/sliderTimer/bcg2.png);
 
             @media(max-width:768.98px) {
                 height: calc(250px + (440 - 200) * ((100vw - 320px) / 880));
