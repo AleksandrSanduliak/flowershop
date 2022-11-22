@@ -20,8 +20,7 @@ function init(){
                     <span class="header__contacts--drop">
                     </span>
                 </span>
-                <a href="#" class="header__contacts--linkcall"><span class="header__contacts--text">Заказать
-                        звонок</span></a></span></div></div>
+                <a href="#" class="header__contacts--linkcall"><span class="header__contacts--text">Заказать звонок</span></a></span></div></div>
                         <br><br>
     <a class="burgercontact__link" href="#"><img src="./assets/icons/mail.svg" alt="burgerimage" class="brgimage"><span style="color: #0093A2;" class="burgercontact__text">info@lavkaroz.ru</span></a>
     <br>

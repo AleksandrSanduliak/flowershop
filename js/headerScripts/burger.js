@@ -95,19 +95,19 @@ listContacts.insertAdjacentHTML('beforeend', makeCont)
 
 const social = [{
         src: './assets/icons/media/WhatsApp.svg',
-        link: 'whatsapp.com',
+        link: 'https://whatsapp.com',
     },
     {
         src: './assets/icons/media/Telegram.svg',
-        link: 'telegram.com',
+        link: 'https://telegram.og',
     },
     {
         src: './assets/icons/media/VK.svg',
-        link: 'vk.com',
+        link: 'https://vk.com',
     },
     {
         src: './assets/icons/media/Instagram.svg',
-        link: 'instagram.com',
+        link: 'https://www.instagram.com/',
     },
 ]
 

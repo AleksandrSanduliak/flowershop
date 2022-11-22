@@ -7,8 +7,8 @@ import {
 const getAllImgs = document.querySelectorAll('[data-slider-btn]')
 getAllImgs.forEach(e => {
 
-    const arrows = `<button data-button-left class="flowerCard__button flowerCard__button--left"><img src="../assets/icons/arrows/left-arrow.svg" alt="left arrow" class="flowerCard__arrow flowerCard__arrow--left"></button>
-    <button data-button-right class="flowerCard__button flowerCard__button--right"><img src="../assets/icons/arrows/right-arrow.svg" alt="right arrow" class="flowerCard__arrow flowerCard__arrow--right"></button>`
+    const arrows = `<button data-button-left class="flowerCard__button flowerCard__button--left"><img src="./assets/icons/arrows/left-arrow.svg" alt="left arrow" class="flowerCard__arrow flowerCard__arrow--left"></button>
+    <button data-button-right class="flowerCard__button flowerCard__button--right"><img src="./assets/icons/arrows/right-arrow.svg" alt="right arrow" class="flowerCard__arrow flowerCard__arrow--right"></button>`
 
     e.insertAdjacentHTML('beforeend', arrows)
 })
@@ -17,7 +17,7 @@ getAllImgs.forEach(e => {
 
 // ********************************************** insert flowercard images **************************************
     const getUl = document.querySelector('.flowerCard__item')
-    const flowercardLi = (imgList) => `<li ${imgList.current} class="flowerCard__li" ><img src="${imgList.link}" alt="Фото роз" class="flowerCard__img" ></li>`
+    const flowercardLi = (imgList) => `<li ${imgList.current} class="flowerCard__li"><img src="${imgList.link}" alt="Фото роз" class="flowerCard__img"></li>`
     const insertUl = imgList.map(ev => flowercardLi(ev)).join('')
     getUl.insertAdjacentHTML('afterbegin', insertUl)
 // ********************************************** insert flowercard images **************************************
