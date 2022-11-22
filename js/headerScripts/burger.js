@@ -113,8 +113,8 @@ const social = [{
 
 
 const getSocial = (social) => `
-<div class=bgSocial><a href="${social.link}"><img class="bgSocial__image" src="${social.src}" alt="Социальные сети"></a></div> 
-`
+<div class=bgSocial><a href="${social.link}" target="_blank"><img class="bgSocial__image" src="${social.src}" alt="Социальные сети"></a></div> 
+` 
 
 let makeSocial = social.map(socialIcons => getSocial(socialIcons)).join('');
 document.querySelector('.social__wrapper').insertAdjacentHTML('beforeend', makeSocial)
