@@ -134,7 +134,7 @@ function init_slider(slider) {
       console.log(slide)
     })
   }
-
+  
   function intervalTimer() {
     const getTimerWrap = document.querySelector("[data-timer]")
     let wrapItems = getTimerWrap.querySelectorAll("[data-timer-items]")
@@ -167,14 +167,14 @@ function init_slider(slider) {
     //     console.log(i)
     // })
 
-    // let doubleClassing = () => {
-    //   if (Number(blockWork.length) === 2) {
-    //     if (!wrapItems[i - 1]) return
-    //     wrapItems[i - 1].classList.remove("block")
-    //     wrapItems[i].classList.add("block")
-    //   } else return
-    // }
-    // setInterval(doubleClassing, 5)
+    let doubleClassing = () => {
+      if (Number(blockWork.length) === 2) {
+        if (!wrapItems[i - 1]) return
+        wrapItems[i - 1].classList.remove("block")
+        wrapItems[i].classList.add("block")
+      } else return
+    }
+    setInterval(doubleClassing, 5)
   }
   setInterval(intervalTimer, 7000)
 }

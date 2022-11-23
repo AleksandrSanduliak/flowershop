@@ -24,6 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: visible;
 }
 .sections__card {
   display: inline-block;

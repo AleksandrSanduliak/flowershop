@@ -190,6 +190,7 @@
 }
 .header__contacts--wraptel {
   flex: 1 1 100%;
+  white-space: nowrap;
 }
 .header__contacts--text {
   font-size: 14px;
