@@ -168,7 +168,7 @@ function init_slider(slider) {
     // })
 
     let doubleClassing = () => {
-      if (Number(blockWork.length) === 2) {
+      if (blockWork.length == 2) {
         if (!wrapItems[i - 1]) return
         wrapItems[i - 1].classList.remove("block")
         wrapItems[i].classList.add("block")
