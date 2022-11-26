@@ -1,95 +1,101 @@
 .bouquets {
+  &__title {
+    display: inline-block;
+    font-family: "Yeseva One";
+    color: var(--link);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+  }
 
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: middle;
+  }
 
-    &__title {
-        display: inline-block;
-        font-family: 'Yeseva One';
-        color: var(--link);
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 50px;
+  &__sliderblock {
+    position: relative;
+    z-index: 15;
+    height: 460px;
+    @media (max-width: 425px) {
+      &__flowerCard__button {
+        display: none;
+      }
+      [data-touch-btns] {
+        display: none;
+      }
     }
 
-    &__head {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        vertical-align: middle;
+    @media (max-width: 1440px) {
+      height: calc(400px + (470 - 400) * (100vw - 320px) / 880);
+    }
+  }
+
+  &__sliderwrap {
+    // width: 100%;
+    // display: flex;
+    // overflow: hidden;
+    // position: relative;
+    // z-index: 19;
+    // left: 0;
+    // pointer-events: visible;
+  }
+
+  &__slider + &__slider {
+    margin-left: 1vw;
+
+    @media (max-width: 768px) {
+      margin-left: 1.5vw;
+    }
+  }
+
+  &__preslider {
+    vertical-align: middle;
+    display: flex;
+    align-self: center;
+  }
+
+  &__slider {
+    width: 278px;
+    flex: 1 1;
+
+    @media (max-width: 1440px) {
+      max-width: 278px;
+      flex: 0 0;
     }
 
-    &__sliderblock {
-        position: relative;
-        z-index: 15;
-        height: 460px;
-
-        @media(max-width: 1440px) {
-            height: calc(400px + (470 - 400) * (100vw - 320px) / 880);
-        }
+    @media (max-width: 768.98px) {
+      display: block;
     }
+  }
 
-    &__sliderwrap {
-        // width: 100%;
-        // display: flex;
-        // overflow: hidden;
-        // position: relative;
-        // z-index: 19;
-        // left: 0;
-        // pointer-events: visible;
-    }
+  // flower card edit
+  &__cardtitle {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0px;
+    margin-bottom: 10px;
+    white-space: initial;
+  }
 
-    &__slider+&__slider {
-        margin-left: 1vw;
-
-        @media(max-width:768px) {
-            margin-left: 1.5vw;
-        }
-    }
-
-    &__preslider {
-        vertical-align: middle;
-        display: flex;
-        align-self: center;
-    }
-
-    &__slider {
-        width: 278px;
-        flex: 1 1;
-       
-        @media(max-width:1440px) {
-            max-width: 278px;
-            flex: 0 0;
-        }
-
-        @media(max-width: 768.98px) {
-            display: block;
-        }
-    }
-
-    // flower card edit
-    &__cardtitle {
-        font-size: 16px;
-        line-height: 22px;
-        padding: 0px;
-        margin-bottom: 10px;
-        white-space: initial;
-    }
-
-    &__cardsubtitle {
-        font-size: 14px;
-        line-height: 22px;
-        color: var(--text-grey);
-        margin-bottom: 20px;
-        white-space: initial;
-    }
+  &__cardsubtitle {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--text-grey);
+    margin-bottom: 20px;
+    white-space: initial;
+  }
 }
 
 .edit {
-    display: flex;
-    overflow: hidden;
+  display: flex;
+  overflow: hidden;
 }
 
 .bouquets__wrapper {
-    // margin-bottom: 60px;
-    // padding-bottom: 60px;
-    display: block;
+  // margin-bottom: 60px;
+  // padding-bottom: 60px;
+  display: block;
 }

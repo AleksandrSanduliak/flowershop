@@ -54,29 +54,29 @@ document.querySelector('.burger__top--img').setAttribute('src', burgerText.clock
 let butgercontact = [{
         text: '+7 (920) 211-49-03',
         src: './assets/icons/Call.svg',
-        link: '#',
+        link: 'tel:+7 (920) 211-49-03',
     },
     {
         text: 'ул. Революции 1905 года 80',
         src: './assets/icons/map.svg',
-        link: '#',
+        link: 'https://goo.gl/maps/pMhnkADW9XoY7anT8',
     },
     {
         text: 'ул. Вл. Невского 17',
         src: './assets/icons/map.svg',
-        link: '#',
+        link: 'https://goo.gl/maps/4jKnXRhDKaazCEac9',
     },
     {
         text: 'info@lavkaroz.ru',
         src: './assets/icons/mail.svg',
-        link: '#',
+        link: 'mailto:info@lavkaroz.ru',
         last: 'burger__contact--last',
         
     },
 
 ]
 const getElem = (butgercontact) => `
-    <div class="burgercontact"><a class ="burgercontact__link" href="${butgercontact.link}"><img src="${butgercontact.src}" alt="burgerimage" class="brgimage"><span class="burgercontact__text ${butgercontact.last}">${butgercontact.text}</span></a></div>
+    <div class="burgercontact"><a class ="burgercontact__link" target="_blank" href="${butgercontact.link}"><img src="${butgercontact.src}" alt="burgerimage" class="brgimage"><span class="burgercontact__text ${butgercontact.last}">${butgercontact.text}</span></a></div>
 `
 let draw = butgercontact.map(element => getElem(element)).join('');
 document.querySelector('.contacts').insertAdjacentHTML('beforeend', draw)
