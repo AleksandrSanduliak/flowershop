@@ -12,9 +12,9 @@
 }
 @media (max-width: 768.98px) {
   .search {
-    margin-right: 20px;
-    padding-right: 15px;
     justify-content: flex-end;
+    margin: 0;
+    padding: 0;
   }
 }
 .search__input {
@@ -28,12 +28,12 @@
 }
 @media (max-width: 1440.98px) {
   .search__input {
-    width: calc(180px + 195 * (100vw - 320px) / 880);
+    width: calc(180px + 155 * (100vw - 320px) / 880);
   }
 }
 @media (max-width: 991.98px) {
   .search__input {
-    width: calc(260px + 195 * (100vw - 768.98px) / 880);
+    width: calc(260px + 155 * (100vw - 768.98px) / 880);
   }
 }
 @media (max-width: 768.98px) {

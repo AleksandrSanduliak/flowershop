@@ -1,9 +1,9 @@
 "use strict";
 const basket = document.querySelectorAll(".basket");
-
+let price = ''
 const shoppingCart = [];
 if (document.querySelector(".flowerCard__price--actual")) {
-  const price = parseInt(
+  price = parseInt(
     String(
       document
         .querySelector(".flowerCard__price")
@@ -39,4 +39,4 @@ basket.forEach((e) => {
     addToCart();
   });
 });
-// localStorage.clear()
+localStorage.clear()
