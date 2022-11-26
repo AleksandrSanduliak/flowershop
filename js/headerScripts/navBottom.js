@@ -79,7 +79,7 @@ let getBottomNav = document.querySelector('.bottom__nav--list')
 navBotFixed = [{
     img: '../../assets/icons/bottomNav/main.svg',
     text: 'Главная',
-    link: '../index.html',
+    link: './index.html',
 },
 {
     img: '../../assets/icons/bottomNav/Search.svg',
@@ -89,7 +89,7 @@ navBotFixed = [{
 {
     img: '../../assets/icons/bottomNav/shopping-basket.svg',
     text: 'Корзина',
-    link: '../../html/search.html',
+    link: './html/search.html',
 },
 {
     img: '../../assets/icons/bottomNav/favorite.svg',

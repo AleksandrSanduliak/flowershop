@@ -2,36 +2,41 @@
 const basket = document.querySelectorAll(".basket");
 
 const shoppingCart = [];
-const price = parseInt(
-  String(
-    document
-      .querySelector(".flowerCard__price")
-      .querySelector(".flowerCard__price--actual").innerHTML
-  ).replace(/ /g, "")
-);
+if (document.querySelector(".flowerCard__price--actual")) {
+  const price = parseInt(
+    String(
+      document
+        .querySelector(".flowerCard__price")
+        .querySelector(".flowerCard__price--actual").innerHTML
+    ).replace(/ /g, "")
+  );
+}
 
-let sum = 0;
+let sum = Number(localStorage.getItem("priceLocalStor"));
 let index = 1;
 let sumHtml = () => {
-  
-  setTimeout(()=>{
+  setTimeout(() => {
     document.querySelector(".header__card--summ").innerHTML = sum + " ₽";
-  }, 10)
+    if (localStorage.getItem("priceLocalStor")) {
+      console.log("matching local storage");
+      const prStor = Number(localStorage.getItem("priceLocalStor"));
+      document.querySelector(".header__card--summ").innerHTML = prStor + " ₽";
+    } else document.querySelector(".header__card--summ").innerHTML = 0 + " ₽";
+  }, 1);
 };
-sumHtml()
-// console.log(price);
+sumHtml();
 basket.forEach((e) => {
   e.addEventListener("click", (e) => {
     const addToCart = () => {
-      // console.log(price)
       sum += price;
-
+      localStorage.setItem("priceLocalStor", `${sum}`);
       shoppingCart.push("add " + index + " " + price + " общая сумма " + sum);
       index++;
       console.log(shoppingCart);
-      sumHtml()
+      sumHtml();
     };
 
     addToCart();
   });
 });
+// localStorage.clear()
