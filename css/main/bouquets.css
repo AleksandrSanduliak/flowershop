@@ -21,6 +21,9 @@
   .bouquets__sliderblock__flowerCard__button {
     display: none;
   }
+  .bouquets__sliderblock [data-touch-btns] {
+    display: none;
+  }
 }
 @media (max-width: 1440px) {
   .bouquets__sliderblock {

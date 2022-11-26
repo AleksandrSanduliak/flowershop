@@ -89,7 +89,7 @@ navBotFixed = [{
 {
     img: '../../assets/icons/bottomNav/shopping-basket.svg',
     text: 'Корзина',
-    link: '',
+    link: '../../html/search.html',
 },
 {
     img: '../../assets/icons/bottomNav/favorite.svg',
@@ -99,7 +99,7 @@ navBotFixed = [{
 {
     img: '../../assets/icons/bottomNav/order.svg',
     text: 'Мои заказы',
-    link: '../../html/search.html',
+    link: '',
 },
 ]
 const makeNavFix = (navBotFixed) => `<a href="${navBotFixed.link}" class=""><li class="bottom__nav--item"><img src="${navBotFixed.img}" alt="icon item" class="bottom__nav--icon"><span class="bottom__nav--text">${navBotFixed.text}</span></li></a>`
