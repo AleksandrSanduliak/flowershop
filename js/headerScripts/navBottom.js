@@ -89,7 +89,7 @@ navBotFixed = [{
 {
     img: './assets/icons/bottomNav/shopping-basket.svg',
     text: 'Корзина',
-    link: './html/search.html',
+    link: './search.html',
 },
 {
     img: './assets/icons/bottomNav/favorite.svg',

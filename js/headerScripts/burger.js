@@ -26,7 +26,7 @@ let burgerText = {
 </ul>`,
     clockImg: './assets/icons/header-clocks.png',
 }
-/* <img class="menu__list--arrow" src="/assets/icons/header-arrow.svg" alt="Info arrow"> */
+
 let burgerMenu = {
     menu: `    <ul class="menu" id="burgermenu">
     <li class="menu__list"><a href="#" class="menu__item">Доставка</a></li>
@@ -94,19 +94,19 @@ const listContacts = document.createElement('ul')
 listContacts.insertAdjacentHTML('beforeend', makeCont)
 
 const social = [{
-        src: '../../assets/icons/media/WhatsApp.svg',
+        src: './assets/icons/media/WhatsApp.svg',
         link: 'https://whatsapp.com',
     },
     {
-        src: '../../assets/icons/media/Telegram.svg',
+        src: './assets/icons/media/Telegram.svg',
         link: 'https://telegram.og',
     },
     {
-        src: '../../assets/icons/media/VK.svg',
+        src: './assets/icons/media/VK.svg',
         link: 'https://vk.com',
     },
     {
-        src: '../../assets/icons/media/Instagram.svg',
+        src: './assets/icons/media/Instagram.svg',
         link: 'https://www.instagram.com/',
     },
 ]
