@@ -43,11 +43,12 @@ let makeCart = () => {
   if (sum >= 1) {
     setInterval(() => {
       console.log("cart isnt empty");
+      // console.log(JSON.parse(arrayCart))
       if (ulCart) {
-        ulCart.insertAdjacentHTML(
-          "beforeend",
-          ''
-        );
+        // ulCart.insertAdjacentHTML(
+        //   "beforeend",
+          
+        // );
       }
     }, 10);
   }
@@ -65,7 +66,7 @@ basket.forEach((e) => {
       const img = document.querySelector('.flowerCard__img')
       const obj = {number:objCounter,Name: name, image: img, price: price,}
       arrayCart.push(obj)
-      
+      localStorage.setItem('arrayFlowerCard', JSON.stringify(arrayCart))
       console.log(arrayCart)
       shoppingCart.push("add " + index + " " + price + " общая сумма " + sum);
       index++;
