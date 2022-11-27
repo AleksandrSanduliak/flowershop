@@ -13,7 +13,8 @@ if (document.querySelector(".flowerCard__price--actual")) {
     ).replace(/ /g, "")
   );
 }
-
+const getFlowerInf = JSON.parse(localStorage.getItem('arrayFlowerCard'))
+console.log(getFlowerInf.length)
 let sum = Number(localStorage.getItem("priceLocalStor"));
 let index = 1;
 let sumHtml = () => {
@@ -43,16 +44,22 @@ let makeCart = () => {
   if (sum >= 1) {
     setInterval(() => {
       console.log("cart isnt empty");
-      // console.log(JSON.parse(arrayCart))
+      // console.log(JSON.parse('arrayCart'))
+      // console.log(getFlowerInf)
+      // console.log(getFlowerInf[0].Name)
+    }, 1000);
       if (ulCart) {
-        // ulCart.insertAdjacentHTML(
-        //   "beforeend",
-          
-        // );
+        for(let c = 0; c <= getFlowerInf.length; c++){
+          const item = `<li class="cartshop-item">${getFlowerInf[c].image}</li>`
+          // console.log(item)
+          ulCart.insertAdjacentHTML('beforeend', item)
+        }
       }
-    }, 10);
+
   }
 };
+
+
 makeCart();
 sumHtml();
 basket.forEach((e) => {
@@ -62,11 +69,14 @@ basket.forEach((e) => {
       sum += price;
       objCounter++
       localStorage.setItem("priceLocalStor", `${sum}`);
-      const name = document.querySelector('.flowerCard__bot--title')
-      const img = document.querySelector('.flowerCard__img')
-      const obj = {number:objCounter,Name: name, image: img, price: price,}
+      const name = document.querySelector('.flowerCard__bot--title').outerHTML
+      let img = document.querySelector('.flowerCard__img').outerHTML
+      // img.style.width = '90px'
+      const obj = {number: objCounter, Name: name, image: img, price: price,}
       arrayCart.push(obj)
       localStorage.setItem('arrayFlowerCard', JSON.stringify(arrayCart))
+
+      
       console.log(arrayCart)
       shoppingCart.push("add " + index + " " + price + " общая сумма " + sum);
       index++;
