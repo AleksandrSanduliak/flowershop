@@ -1,7 +1,9 @@
 "use strict";
 const basket = document.querySelectorAll(".basket");
-let price = ''
+let price = "";
 const shoppingCart = [];
+const arrayCart = [];
+
 if (document.querySelector(".flowerCard__price--actual")) {
   price = parseInt(
     String(
@@ -24,19 +26,55 @@ let sumHtml = () => {
     } else document.querySelector(".header__card--summ").innerHTML = 0 + " ₽";
   }, 1);
 };
+let makeCart = () => {
+  let ulCart = document.querySelector(".cartshop-list");
+  if (sum === 0) {
+    setTimeout(() => {
+      console.log("empty");
+
+      if (ulCart) {
+        ulCart.insertAdjacentHTML(
+          "beforeend",
+          '<li class="cartshop-item">Список Пуст, добавте что-то в корзину!</li>'
+        );
+      }
+    }, 10);
+  }
+  if (sum >= 1) {
+    setInterval(() => {
+      console.log("cart isnt empty");
+      if (ulCart) {
+        ulCart.insertAdjacentHTML(
+          "beforeend",
+          ''
+        );
+      }
+    }, 10);
+  }
+};
+makeCart();
 sumHtml();
 basket.forEach((e) => {
+  let objCounter = 0
   e.addEventListener("click", (e) => {
     const addToCart = () => {
       sum += price;
+      objCounter++
       localStorage.setItem("priceLocalStor", `${sum}`);
+      const name = document.querySelector('.flowerCard__bot--title')
+      const img = document.querySelector('.flowerCard__img')
+      const obj = {number:objCounter,Name: name, image: img, price: price,}
+      arrayCart.push(obj)
+      
+      console.log(arrayCart)
       shoppingCart.push("add " + index + " " + price + " общая сумма " + sum);
       index++;
-      console.log(shoppingCart);
+      
       sumHtml();
+      makeCart();
     };
 
     addToCart();
   });
 });
-localStorage.clear()
+// localStorage.clear();

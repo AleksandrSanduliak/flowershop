@@ -1,0 +1,34 @@
+.search-title {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.cartshop-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px;
+}
+.cartshop-title {
+  color: #222a46;
+}
+.cartshop-subtitle {
+  color: #7d818e;
+}
+.cartshop-list {
+  max-width: 870px;
+  font-family: "TT Norms";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  border: 1px solid #E3E3E8;
+  max-width: 870px;
+  border-radius: 10px;
+}
+.cartshop-item {
+  padding: 10px 25px;
+  border: 1px solid #E3E3E8;
+}
+.cartshop-item:first-child {
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=search-main.css.map */

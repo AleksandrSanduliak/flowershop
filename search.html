@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flowers</title>
-    <link href="../css/normalize.css" rel="stylesheet">
-    <link href="../css/header/settings.css" rel="stylesheet">
-    <link href="../css/footer/footer.css" rel="stylesheet">
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/header/settings.css" rel="stylesheet">
+    <link href="./css/footer/footer.css" rel="stylesheet">
     <!-- header -->
 
-    <link href="../css/header/header.css" rel="stylesheet">
-    <link href="../css/header/nav.css" rel="stylesheet">
-    <link href="../css/header/burger.css" rel="stylesheet">
-    <link href="../css/header/search.css" rel="stylesheet">
-    <link href="../css/header/bottomNav.css" rel="stylesheet">
+    <link href="./css/header/header.css" rel="stylesheet">
+    <link href="./css/header/nav.css" rel="stylesheet">
+    <link href="./css/header/burger.css" rel="stylesheet">
+    <link href="./css/header/search.css" rel="stylesheet">
+    <link href="./css/header/bottomNav.css" rel="stylesheet">
+    <link href="./css/header/path.css" rel="stylesheet">
+    <link href="./css/search-main/search-main.css" rel="stylesheet">
     <!-- header -->
 
 </head>
@@ -52,7 +54,7 @@
                                     alt="Instagram" class="header__social--image"></a>
                         </div>
                         <div class="header__cabinet">
-                            <img src="..assets/icons/profile.svg" alt="" class="header__cabinet--image">
+                            <img src="./assets/icons/profile.svg" alt="" class="header__cabinet--image">
                             <span class="header__cabinet--text">Мои заказы</span>
                         </div>
                         <div class="header__phone">
@@ -163,15 +165,24 @@
     <main class="main__search">
         <section class="cart">
             <div class="cart__container">
-                
+                <div class="path"><a href="./index.html" class="main">Главная</a><img src="./assets/icons/arrows/Vector.svg" style="vertical-align: middle;" alt="vector" class="arrow__line"> <a href="./index.html" class="main sub-main">Корзина</a></div>
+                <h2 class="sections__title search-title">Корзина</h2>
+                <div class="cartshop">
+                   
+                    <ul class="cartshop-list">
+                        <li class="cartshop-item"><p class="cartshop-title">Товары в корзине</p>
+                            <p class="cartshop-subtitle">Очистить корзину</p></div>
+                        </li>
+                        
+                    </ul>
             </div>
         </section>
     </main>
-    <script src="../js/headerScripts/navBottom.js"></script>
-    <script src="../js/headerScripts/burger.js"></script>
-    <script src="../js/headerScripts/smooth.js"></script>
-    <script src="../js/headerScripts/dropdown.js"></script>
-    <script src="../js/mainScripts/shoppingCart.js"></script>
+    <script src="./js/headerScripts/navBottom.js"></script>
+    <script src="./js/headerScripts/burger.js"></script>
+    <script src="./js/headerScripts/smooth.js"></script>
+    <script src="./js/headerScripts/dropdown.js"></script>
+    <script src="./js/mainScripts/shoppingCart.js"></script>
 
 </body>
 </html>
