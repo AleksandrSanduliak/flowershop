@@ -77,26 +77,31 @@ document.querySelector('.header__bottom--list').insertAdjacentHTML('beforeend', 
 let getBottomNav = document.querySelector('.bottom__nav--list')
 
 navBotFixed = [{
-    img: '../assets/icons/bottomNav/main.svg',
+    img: './assets/icons/bottomNav/main.svg',
     text: 'Главная',
+    link: './index.html',
 },
 {
-    img: '../assets/icons/bottomNav/Search.svg',
+    img: './assets/icons/bottomNav/Search.svg',
     text: 'Каталог',
+    link: '',
 },
 {
-    img: '../assets/icons/bottomNav/shopping-basket.svg',
+    img: './assets/icons/bottomNav/shopping-basket.svg',
     text: 'Корзина',
+    link: './search.html',
 },
 {
-    img: '../assets/icons/bottomNav/favorite.svg',
+    img: './assets/icons/bottomNav/favorite.svg',
     text: 'Избранное',
+    link: '',
 },
 {
-    img: '../assets/icons/bottomNav/order.svg',
+    img: './assets/icons/bottomNav/order.svg',
     text: 'Мои заказы',
+    link: '',
 },
 ]
-const makeNavFix = (navBotFixed) => `<li class="bottom__nav--item"><img src="${navBotFixed.img}" alt="icon item" class="bottom__nav--icon"><span class="bottom__nav--text">${navBotFixed.text}</span></li>`
+const makeNavFix = (navBotFixed) => `<a href="${navBotFixed.link}" class=""><li class="bottom__nav--item"><img src="${navBotFixed.img}" alt="icon item" class="bottom__nav--icon"><span class="bottom__nav--text">${navBotFixed.text}</span></li></a>`
 let makeBotFixed = navBotFixed.map(element => makeNavFix(element)).join('')
 getBottomNav.insertAdjacentHTML('beforeend', makeBotFixed)

@@ -1,0 +1,71 @@
+.search {
+  &-title {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
+.cartshop {
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+  }
+  &-title {
+    color: #222a46;
+  }
+  &-subtitle {
+    color: #7d818e;
+  }
+  &-list {
+    max-width: 870px;
+    font-family: "TT Norms";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    border: 1px solid #e3e3e8;
+    max-width: 870px;
+    border-radius: 10px;
+  }
+  &-body {
+    font-family: "TT Norms";
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 10px;
+    color: #222a46;
+  }
+  &-item {
+    padding: 20px 30px;
+    border-top: 1px solid #e3e3e8;
+
+    display: flex;
+
+    & > img {
+      width: 90px;
+      height: 90px;
+      // object-fit: cover;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+    &:first-child {
+      border-top: none;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &-calculator {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #d0d2d7;
+    border-radius: 5px;
+    &--plus{
+      border: none;
+      width: 24px;
+      height: 24px;
+    }
+    &--minus{
+      border: none;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

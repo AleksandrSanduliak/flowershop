@@ -24,9 +24,9 @@ let burgerText = {
 </ul></li>
     <li class="menu__list"><a href="#" class="menu__item" data-scroll>Контакты</a></li>
 </ul>`,
-    clockImg: '/assets/icons/header-clocks.png',
+    clockImg: './assets/icons/header-clocks.png',
 }
-/* <img class="menu__list--arrow" src="/assets/icons/header-arrow.svg" alt="Info arrow"> */
+
 let burgerMenu = {
     menu: `    <ul class="menu" id="burgermenu">
     <li class="menu__list"><a href="#" class="menu__item">Доставка</a></li>
@@ -76,7 +76,7 @@ let butgercontact = [{
 
 ]
 const getElem = (butgercontact) => `
-    <div class="burgercontact"><a class ="burgercontact__link" href="${butgercontact.link}"><img src="${butgercontact.src}" alt="burgerimage" class="brgimage"><span class="burgercontact__text ${butgercontact.last}">${butgercontact.text}</span></a></div>
+    <div class="burgercontact"><a class ="burgercontact__link" target="_blank" href="${butgercontact.link}"><img src="${butgercontact.src}" alt="burgerimage" class="brgimage"><span class="burgercontact__text ${butgercontact.last}">${butgercontact.text}</span></a></div>
 `
 let draw = butgercontact.map(element => getElem(element)).join('');
 document.querySelector('.contacts').insertAdjacentHTML('beforeend', draw)
@@ -94,27 +94,27 @@ const listContacts = document.createElement('ul')
 listContacts.insertAdjacentHTML('beforeend', makeCont)
 
 const social = [{
-        src: '../assets/icons/media/WhatsApp.svg',
-        link: 'whatsapp.com',
+        src: './assets/icons/media/WhatsApp.svg',
+        link: 'https://whatsapp.com',
     },
     {
-        src: '../assets/icons/media/Telegram.svg',
-        link: 'telegram.com',
+        src: './assets/icons/media/Telegram.svg',
+        link: 'https://telegram.og',
     },
     {
-        src: '../assets/icons/media/VK.svg',
-        link: 'vk.com',
+        src: './assets/icons/media/VK.svg',
+        link: 'https://vk.com',
     },
     {
-        src: '../assets/icons/media/Instagram.svg',
-        link: 'instagram.com',
+        src: './assets/icons/media/Instagram.svg',
+        link: 'https://www.instagram.com/',
     },
 ]
 
 
 const getSocial = (social) => `
-<div class=bgSocial><a href="${social.link}"><img class="bgSocial__image" src="${social.src}" alt="Социальные сети"></a></div> 
-`
+<div class=bgSocial><a href="${social.link}" target="_blank"><img class="bgSocial__image" src="${social.src}" alt="Социальные сети"></a></div> 
+` 
 
 let makeSocial = social.map(socialIcons => getSocial(socialIcons)).join('');
 document.querySelector('.social__wrapper').insertAdjacentHTML('beforeend', makeSocial)

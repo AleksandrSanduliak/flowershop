@@ -17,6 +17,14 @@
   z-index: 15;
   height: 460px;
 }
+@media (max-width: 425px) {
+  .bouquets__sliderblock__flowerCard__button {
+    display: none;
+  }
+  .bouquets__sliderblock [data-touch-btns] {
+    display: none;
+  }
+}
 @media (max-width: 1440px) {
   .bouquets__sliderblock {
     height: calc(400px + 70 * (100vw - 320px) / 880);

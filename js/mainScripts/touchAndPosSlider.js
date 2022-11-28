@@ -4,8 +4,8 @@ const maxW768 = window.matchMedia("(max-width: 768px)")
 const touchBtn = document.querySelectorAll('[data-touch-btns]')
 touchBtn.forEach(e => {
 
-    const arrows = `<button data-button-touch-left class="flowerCard__button flowerCard__button--left"><img src="../assets/icons/arrows/left-arrow.svg" alt="left arrow" class="flowerCard__arrow flowerCard__arrow--left"></button>
-    <button data-button-touch-right class="flowerCard__button flowerCard__button--right"><img src="../assets/icons/arrows/right-arrow.svg" alt="right arrow" class="flowerCard__arrow flowerCard__arrow--right"></button>`
+    const arrows = `<button data-button-touch-left class="flowerCard__button flowerCard__button--left"><img src="./assets/icons/arrows/left-arrow.svg" alt="left arrow" class="flowerCard__arrow flowerCard__arrow--left"></button>
+    <button data-button-touch-right class="flowerCard__button flowerCard__button--right"><img src="./assets/icons/arrows/right-arrow.svg" alt="right arrow" class="flowerCard__arrow flowerCard__arrow--right"></button>`
 
     e.insertAdjacentHTML('beforeend', arrows)
 
@@ -18,7 +18,7 @@ touch.forEach((ev) => {
     let touchBtnL = ev.querySelector('[data-button-touch-left]')
     let touchWrapper = ev.querySelector('[data-touch-wrapper]')
 
-    let maxLenghtR = -1400
+    let maxLenghtR = -1500
     const sliderRange = () => {
         const rect = ev.getBoundingClientRect()
         if (touchWrapper) {
@@ -46,7 +46,7 @@ touch.forEach((ev) => {
         function rightMove() {
 
             touchBtnR.addEventListener('click', eve => {
-                let position = (translate - bouquetsSliderWidth - 30) + 'px'
+                let position = (translate - bouquetsSliderWidth - 50) + 'px'
                 if (translate >= maxLenghtR) {
                     console.log(position)
                     touchWrapper.style.transform = `translateX(${position})`
@@ -74,7 +74,7 @@ touch.forEach((ev) => {
         function leftMove() {
 
             touchBtnL.addEventListener('click', eve => {
-                let positions = (translate + bouquetsSliderWidth + 30) + 'px'
+                let positions = (translate + bouquetsSliderWidth + 50) + 'px'
                 if (translate >= maxLenghtL) {
 
                     translate = 0
@@ -105,7 +105,7 @@ touch.forEach((ev) => {
         ev.addEventListener('mousedown', e => {
             pressMouseDown = true
             cursorPosition = e.offsetX - touchWrapper.offsetLeft
-            // console.log('mousedown')
+            
         })
         window.addEventListener('mouseup', () => {
             pressMouseDown = false
@@ -122,6 +122,7 @@ touch.forEach((ev) => {
 
         let clientX
         let touchPress = false
+        
         // TOUCH
         ev.addEventListener('touchstart', e => {
             touchPress = true

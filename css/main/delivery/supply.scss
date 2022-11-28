@@ -1,75 +1,73 @@
 .supply {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #353949;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #353949;
+  margin-top: 20px;
+  @media (max-width: 500.98px) {
+    font-size: 13px;
+    line-height: 18px;
+    text-align: justify;
+  }
 
-    @media (max-width:500.98px) {
-        font-size: 13px;
-        line-height: 18px;
-        text-align: justify;
+  &__ul {
+    &--wrapper {
+      cursor: pointer;
+      position: relative;
+      height: 98px;
+      flex: 0 0 auto;
+      @media (max-width: 768.98px) {
+        height: calc(70px + (98 - 70) * (100vw - 320px) / 880);
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    white-space: nowrap;
+  }
+
+  &__item {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #f2f3f5;
+    box-shadow: 0px 4px 12px rgba(34, 42, 70, 0.03);
+    border-radius: 5px;
+    margin-right: 15px;
+    flex: 0 0 auto;
+    &:last-child {
+      margin-right: 0;
     }
 
-    &__ul {
-        &--wrapper {
-            cursor: pointer;
-            position: relative;
-            height: 98px;
-            flex: 0 0 auto;
-            @media (max-width:768.98px){
-                height: calc(70px + (98 - 70) * (100vw - 320px) / 880);
-            }
-        }
+    @media (max-width: 1250px) {
+      margin-top: 5px;
+      flex: 0 0 auto;
+      margin-right: 0;
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
     }
 
-    &__list {
-        display: flex;
-        white-space: nowrap;
-    }
-
-    &__item {
-        padding: 25px;
-        display: flex;
-        align-items: center;
-        background-color: white;
-        border: 1px solid #F2F3F5;
-        box-shadow: 0px 4px 12px rgba(34, 42, 70, 0.03);
-        border-radius: 5px;
-        margin-right: 15px;
-        flex: 0 0 auto;
-        &:last-child {
-            margin-right: 0;
-        }
-
-        @media(max-width: 1250px) {
-            margin-top: 5px;
-            flex: 0 0 auto;
-            margin-right: 0;
-            &:not(:last-child) {
-                margin-right: 5px;
-            }
-        }
-
-        @media(max-width: 768.98px) {
-            &:not(:last-child) {
-                margin-right: 10px;
-            }
-
-            padding: 10px 10px;
-            font-size: 12px;
-
-        }
-    }
-
-
-    &__img {
+    @media (max-width: 768.98px) {
+      &:not(:last-child) {
         margin-right: 10px;
-        width: 40px;
-        height: 40px;
+      }
+
+      padding: 10px 10px;
+      font-size: 12px;
     }
+  }
+
+  &__img {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+  }
 }
-.slider__wrapper > .flowerCard{
-    @media(max-width:768.98px){
-        display: none;
-    }
+.slider__wrapper > .flowerCard {
+  @media (max-width: 768.98px) {
+    display: none;
+  }
 }

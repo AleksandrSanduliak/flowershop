@@ -31,7 +31,7 @@
     line-height: 2rem;
     width: 100%;
     height: 100%;
-    background-image: url(/assets/icons/crosshair.png);
+    background-image: url(../../assets/icons/crosshair.png);
     background-repeat: no-repeat;
   }
 }
