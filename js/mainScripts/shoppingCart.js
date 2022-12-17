@@ -93,7 +93,11 @@ let makeCart = () => {
       for (let key in getFlowerInf) {
         const item = `<li class="cartshop-item">${getFlowerInf[key].image}<div class="cartshop-body">${getFlowerInf[key].Name}
             </div><div class="cartshop-calculator"><button class="cartshop-calculator--minus">-</button>
-           <p class="counter">1</p><button class="cartshop-calculator--plus">+</button></div></li> <p class="resultCalc"></p>`
+           <p class="counter">1</p><button class="cartshop-calculator--plus">+</button></div><p class="resultCalc"></p>
+           
+           <button class="xcross"><span class="xcross-line xcross-line--one"></span><span class="xcross-line xcross-line--two"></span></button>
+           
+           </li>`
         ulCart.insertAdjacentHTML('beforeend', item)
       }
     }
@@ -111,13 +115,11 @@ let removeCart = () => {
       localStorage.clear()
     })
 }
-// setInterval(removeCart, 2000)
-// removeCart()
+removeCart()
 
 const calcWrapper = document.querySelectorAll('.cartshop-calculator')
+let calcCount = 1
 let cartCounter = () => {
-  window.addEventListener('DOMContentLoaded', () => {
-  })
 
   calcWrapper.forEach(ev => {
     const minus = ev.querySelector('.cartshop-calculator--minus')
@@ -125,12 +127,27 @@ let cartCounter = () => {
     console.log(calcWrapper)
     minus.addEventListener('click', (ev) => {
       console.log('click')
-      
+      calculator(-1)
     })
     plus.addEventListener('click', (ev) => {
       console.log('click')
-
+      calculator(+1)
     })
+
+    const calculator = (i) => {
+      console.log(i, calcCount)
+      const countCalc = ev.querySelector('.counter')
+      if(calcCount >= 1 && calcCount < 100){
+        calcCount += i
+        countCalc.innerHTML = calcCount
+      }else{
+        i = 1
+        calcCount = 1
+        countCalc.innerHTML = calcCount
+      }
+      console.log(i, calcCount)
+    }
+    // calculator()
   })
 }
 cartCounter()

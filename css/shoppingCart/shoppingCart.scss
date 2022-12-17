@@ -46,7 +46,7 @@
 
     display: flex;
 
-    &>img {
+    & > img {
       width: 90px;
       height: 90px;
       // object-fit: cover;
@@ -88,6 +88,44 @@
       width: 24px;
       height: 24px;
       background-color: white;
+    }
+  }
+}
+
+.xcross {
+  position: relative;
+  border-radius: 50px;
+  border: 2px solid #e2e4eb;
+  display: flex;
+  align-self: center;
+  width: 24px;
+  height: 24px;
+  background: inherit;
+  transition: all 0.4s ease;
+  &:hover {
+    border-color: #e2195b;
+  }
+  &:hover > &-line {
+    background-color: #e2195b;
+  }
+  &-line {
+    position: absolute;
+    top: 40%;
+    left: 13%;
+    height: 3.5px;
+    width: 15px;
+    border-radius: 50px;
+    background-color: #e2e4eb;
+
+    transition: all 0.4s ease;
+    // &:hover{
+    //   background-color: #E2195B;
+    // }
+    &--one {
+      transform: rotate(-40deg);
+    }
+    &--two {
+      transform: rotate(40deg);
     }
   }
 }
