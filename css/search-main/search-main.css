@@ -50,16 +50,26 @@
 .cartshop-calculator {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  align-items: center;
   border: 1px solid #d0d2d7;
   border-radius: 5px;
+  height: 40px;
+  width: 108px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
 }
 .cartshop-calculator--plus {
   border: none;
   width: 24px;
   height: 24px;
+  background-color: white;
 }
 .cartshop-calculator--minus {
   border: none;
   width: 24px;
   height: 24px;
+  background-color: white;
 }/*# sourceMappingURL=search-main.css.map */
