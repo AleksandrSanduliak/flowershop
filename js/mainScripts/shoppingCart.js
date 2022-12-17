@@ -51,8 +51,6 @@ basket.forEach((ev) => {
         price: price,
       }
 
-
-
       arrayCart.push(obj)
       localStorage.setItem('arrayFlowerCard', JSON.stringify(arrayCart))
 
@@ -69,8 +67,10 @@ basket.forEach((ev) => {
 
 });
 let ulCart = document.querySelector(".cartshop-list");
+
 let makeCart = () => {
   const getFlowerInf = JSON.parse(localStorage.getItem('arrayFlowerCard'))
+  console.log(getFlowerInf)
   if (sum === 0) {
     setTimeout(() => {
       console.log("empty");
@@ -94,7 +94,7 @@ let makeCart = () => {
         const item = `<li class="cartshop-item">${getFlowerInf[key].image}<div class="cartshop-body">${getFlowerInf[key].Name}
             </div><div class="cartshop-calculator"><button class="cartshop-calculator--minus">-</button>
            <p class="counter">1</p><button class="cartshop-calculator--plus">+</button></div><p class="resultCalc"></p>
-           
+           <p class="price-result">${getFlowerInf[key].price}</p>
            <button class="xcross"><span class="xcross-line xcross-line--one"></span><span class="xcross-line xcross-line--two"></span></button>
            
            </li>`
@@ -137,6 +137,7 @@ let cartCounter = () => {
     const calculator = (i) => {
       console.log(i, calcCount)
       const countCalc = ev.querySelector('.counter')
+      console.log(ev)
       if(calcCount >= 1 && calcCount < 100){
         calcCount += i
         countCalc.innerHTML = calcCount
@@ -146,8 +147,16 @@ let cartCounter = () => {
         countCalc.innerHTML = calcCount
       }
       console.log(i, calcCount)
+      multiplication(calcCount)
     }
-    // calculator()
+    const multiplication = (calcCount) => {
+      const priceElem = ev.parentNode.querySelector('.price-result')
+      let priceVal = priceElem.textContent
+      priceElem.innerHTML = priceVal * calcCount
+      // console.log(ev.querySelector('.price-result'))
+    }
+    // multiplication()
+    // setInterval(multiplication, 1000)
   })
 }
 cartCounter()
