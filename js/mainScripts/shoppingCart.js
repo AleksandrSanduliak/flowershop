@@ -1,12 +1,8 @@
 "use strict";
-
-// const { get } = require("http");
-
 const basket = document.querySelectorAll(".basket");
 let price = "";
 const shoppingCart = [];
 const arrayCart = [];
-
 
 let sum = Number(localStorage.getItem("priceLocalStor"));
 let index = 1;
@@ -14,16 +10,14 @@ let sumHtml = () => {
   setTimeout(() => {
     document.querySelector(".header__card--summ").innerHTML = sum + " ₽";
     if (localStorage.getItem("priceLocalStor")) {
-      console.log("matching local storage");
+      // console.log("matching local storage");
       const prStor = Number(localStorage.getItem("priceLocalStor"));
       document.querySelector(".header__card--summ").innerHTML = prStor + " ₽";
     } else document.querySelector(".header__card--summ").innerHTML = 0 + " ₽";
   }, 1);
 };
 
-
-
-sumHtml();
+setInterval(sumHtml, 100)
 basket.forEach((ev) => {
 
   ev.addEventListener("click", (e) => {
@@ -50,16 +44,15 @@ basket.forEach((ev) => {
         image: img,
         price: price,
       }
-
       arrayCart.push(obj)
       localStorage.setItem('arrayFlowerCard', JSON.stringify(arrayCart))
 
       console.log(arrayCart)
       shoppingCart.push("add " + index + " " + price + " общая сумма " + sum);
       index++;
+      multiplication(obj)
 
       sumHtml();
-
     };
 
     addToCart();
@@ -86,7 +79,7 @@ let makeCart = () => {
 
   if (sum >= 1) {
     setInterval(() => {
-      console.log("cart isnt empty");
+      // console.log("cart isnt empty");
 
     }, 1000);
     if (ulCart) {
@@ -95,7 +88,7 @@ let makeCart = () => {
             </div><div class="cartshop-calculator"><button class="cartshop-calculator--minus">-</button>
            <p class="counter">1</p><button class="cartshop-calculator--plus">+</button></div><p class="resultCalc"></p>
            <p class="price-result">${getFlowerInf[key].price}</p>
-           <button class="xcross"><span class="xcross-line xcross-line--one"></span><span class="xcross-line xcross-line--two"></span></button>
+           <button data-rembtn class="xcross"><span class="xcross-line xcross-line--one"></span><span class="xcross-line xcross-line--two"></span></button>
            
            </li>`
         ulCart.insertAdjacentHTML('beforeend', item)
@@ -106,7 +99,7 @@ let makeCart = () => {
 };
 makeCart();
 
-let removeCart = () => {
+const removeCart = () => {
   let Butte
   if (Butte = document.querySelector('.cartshop-subtitle'))
     Butte.addEventListener('click', () => {
@@ -115,6 +108,16 @@ let removeCart = () => {
       localStorage.clear()
     })
 }
+const removeLi = () => {
+  const foundBtns = document.querySelectorAll('[data-rembtn]')
+  console.log(foundBtns)
+  foundBtns.forEach(ev => {
+    ev.addEventListener('click', e => {
+      console.log(ev.parentElement.remove())
+    })
+  })
+}
+removeLi()
 removeCart()
 
 const calcWrapper = document.querySelectorAll('.cartshop-calculator')
@@ -137,11 +140,11 @@ let cartCounter = () => {
     const calculator = (i) => {
       console.log(i, calcCount)
       const countCalc = ev.querySelector('.counter')
-      console.log(ev)
-      if(calcCount >= 1 && calcCount < 100){
+      // console.log(ev)
+      if (calcCount >= 1 && calcCount < 100) {
         calcCount += i
         countCalc.innerHTML = calcCount
-      }else{
+      } else {
         i = 1
         calcCount = 1
         countCalc.innerHTML = calcCount
@@ -153,10 +156,36 @@ let cartCounter = () => {
       const priceElem = ev.parentNode.querySelector('.price-result')
       let priceVal = priceElem.textContent
       priceElem.innerHTML = priceVal * calcCount
-      // console.log(ev.querySelector('.price-result'))
+
+      if (priceElem) {
+        const allCount = document.querySelectorAll('.counter')
+        // console.log(allCount)
+        allCount.forEach(ev => {
+          // console.log(ev)
+          const parseArray = JSON.parse(localStorage.getItem('arrayFlowerCard'))
+          parseArray.forEach((ev, indx) => {
+            // ev.push(calcCount)
+            console.log(ev.number = calcCount)
+          })
+          console.log(parseArray)
+
+        })
+        // localStorage.setItem('calcCount', `${calcCount}`)
+
+      }
     }
-    // multiplication()
-    // setInterval(multiplication, 1000)
+
+    const sumCart = () => {
+      let sumRes = 0
+      const getPrice = document.querySelectorAll('.price-result')
+      if (getPrice) {
+        getPrice.forEach(ev => {
+          sumRes += Number(ev.textContent)
+          localStorage.setItem('priceLocalStor', `${sumRes}`)
+        })
+      } else return console.log('error price count doesnt found')
+    }
+    setInterval(sumCart, 1000)
   })
 }
 cartCounter()
