@@ -50,7 +50,7 @@ basket.forEach((ev) => {
       console.log(arrayCart)
       shoppingCart.push("add " + index + " " + price + " общая сумма " + sum);
       index++;
-      multiplication(obj)
+      // multiplication(obj)
 
       sumHtml();
     };
@@ -121,7 +121,7 @@ removeLi()
 removeCart()
 
 const calcWrapper = document.querySelectorAll('.cartshop-calculator')
-let calcCount = 1
+
 let cartCounter = () => {
 
   calcWrapper.forEach(ev => {
@@ -136,7 +136,7 @@ let cartCounter = () => {
       console.log('click')
       calculator(+1)
     })
-
+    let calcCount = 1
     const calculator = (i) => {
       console.log(i, calcCount)
       const countCalc = ev.querySelector('.counter')
@@ -151,6 +151,15 @@ let cartCounter = () => {
       }
       console.log(i, calcCount)
       multiplication(calcCount)
+      const parseCount = () => {
+       const getCount =  JSON.parse(localStorage.getItem('arrayFlowerCard'))
+       
+       getCount.forEach(ev => {
+        
+
+       })
+      }
+      setInterval(parseCount, 1000)
     }
     const multiplication = (calcCount) => {
       const priceElem = ev.parentNode.querySelector('.price-result')
@@ -159,18 +168,14 @@ let cartCounter = () => {
 
       if (priceElem) {
         const allCount = document.querySelectorAll('.counter')
-        // console.log(allCount)
         allCount.forEach(ev => {
-          // console.log(ev)
           const parseArray = JSON.parse(localStorage.getItem('arrayFlowerCard'))
-          parseArray.forEach((ev, indx) => {
-            // ev.push(calcCount)
-            console.log(ev.number = calcCount)
+          parseArray.forEach((evs, indx) => {
+            const rewriteArray = evs.number = Number(allCount[indx].textContent)
           })
           console.log(parseArray)
-
+          localStorage.setItem('arrayFlowerCard', JSON.stringify(parseArray))
         })
-        // localStorage.setItem('calcCount', `${calcCount}`)
 
       }
     }
@@ -178,6 +183,7 @@ let cartCounter = () => {
     const sumCart = () => {
       let sumRes = 0
       const getPrice = document.querySelectorAll('.price-result')
+      // console.log(getPrice)
       if (getPrice) {
         getPrice.forEach(ev => {
           sumRes += Number(ev.textContent)
@@ -189,3 +195,4 @@ let cartCounter = () => {
   })
 }
 cartCounter()
+// localStorage.clear()
