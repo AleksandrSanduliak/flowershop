@@ -30,7 +30,7 @@ basket.forEach((ev) => {
     const name = ev.parentElement.parentElement.parentNode.querySelector('.flowerCard__bot--title').outerHTML
     const img = ev.parentElement.parentElement.parentElement.querySelector('.flowerCard__img').outerHTML
 
-    const addToCart = () => {
+    const addToCart = (() => {
 
       sum += price;
       let objCounter = 0
@@ -53,15 +53,14 @@ basket.forEach((ev) => {
       // multiplication(obj)
 
       sumHtml();
-    };
+    })();
 
-    addToCart();
   });
 
 });
 let ulCart = document.querySelector(".cartshop-list");
 
-let makeCart = () => {
+let makeCart = (() => {
   const getFlowerInf = JSON.parse(localStorage.getItem('arrayFlowerCard'))
   console.log(getFlowerInf)
   if (sum === 0) {
@@ -96,10 +95,8 @@ let makeCart = () => {
     }
 
   }
-};
-makeCart();
-
-const removeCart = () => {
+})();
+const removeCart = (() => {
   let Butte
   if (Butte = document.querySelector('.cartshop-subtitle'))
     Butte.addEventListener('click', () => {
@@ -107,8 +104,8 @@ const removeCart = () => {
       console.log('click')
       localStorage.clear()
     })
-}
-const removeLi = () => {
+})()
+const removeLi = (() => {
   const foundBtns = document.querySelectorAll('[data-rembtn]')
   console.log(foundBtns)
   foundBtns.forEach(ev => {
@@ -116,13 +113,11 @@ const removeLi = () => {
       console.log(ev.parentElement.remove())
     })
   })
-}
-removeLi()
-removeCart()
+})()
 
 const calcWrapper = document.querySelectorAll('.cartshop-calculator')
 
-let cartCounter = () => {
+let cartCounter = (() => {
 
   calcWrapper.forEach(ev => {
     const minus = ev.querySelector('.cartshop-calculator--minus')
@@ -151,15 +146,6 @@ let cartCounter = () => {
       }
       console.log(i, calcCount)
       multiplication(calcCount)
-      const parseCount = () => {
-       const getCount =  JSON.parse(localStorage.getItem('arrayFlowerCard'))
-       
-       getCount.forEach(ev => {
-        
-
-       })
-      }
-      setInterval(parseCount, 1000)
     }
     const multiplication = (calcCount) => {
       const priceElem = ev.parentNode.querySelector('.price-result')
@@ -176,8 +162,12 @@ let cartCounter = () => {
           console.log(parseArray)
           localStorage.setItem('arrayFlowerCard', JSON.stringify(parseArray))
         })
-
       }
+
+      const parseCount = (() => {
+        const parseArray = JSON.parse(localStorage.getItem('arrayFlowerCard'))
+        
+      })()
     }
 
     const sumCart = () => {
@@ -193,6 +183,6 @@ let cartCounter = () => {
     }
     setInterval(sumCart, 1000)
   })
-}
-cartCounter()
+})()
+
 // localStorage.clear()
