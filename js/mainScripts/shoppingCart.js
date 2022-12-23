@@ -109,6 +109,7 @@ const removeLi = (() => {
       const parseArray = JSON.parse(localStorage.getItem('arrayFlowerCard'))
       if (!parseArray) return console.log('cart shop empty')
       parseArray.splice(indx, indx + 1)
+      console.log(parseArray)
       localStorage.setItem('arrayFlowerCard', JSON.stringify(parseArray))
     })
   })
