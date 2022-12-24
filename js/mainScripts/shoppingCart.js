@@ -184,5 +184,5 @@ let cartCounter = (() => {
   }
   setInterval(parseCount, 10)
 })()
-
+// fdsfs
 // localStorage.clear()
