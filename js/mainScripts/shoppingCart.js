@@ -17,6 +17,7 @@ let sumHtml = () => {
   } else getSum.innerHTML = 0 + " ₽";
 };
 setInterval(sumHtml, 100)
+
 basket.forEach((ev) => {
   ev.addEventListener("click", (e) => {
     price = parseInt(
@@ -77,10 +78,11 @@ let makeCart = (() => {
     if (ulCart) {
       for (let key in getFlowerInf) {
         const item = `<li class="cartshop-item">${getFlowerInf[key].image}<div class="cartshop-body">${getFlowerInf[key].Name}
-            </div><div class="cartshop-calculator"><button class="cartshop-calculator--minus">-</button>
-           <p class="counter">1</p><button class="cartshop-calculator--plus">+</button></div><p class="resultCalc"></p>
-           <p class="price-result">${getFlowerInf[key].price}</p>
-           <button data-rembtn class="xcross"><span class="xcross-line xcross-line--one"></span><span class="xcross-line xcross-line--two"></span></button>
+        </div>
+        <div class="cartshop__rightside"><div class="cartshop-calculator"><button class="cartshop-calculator--minus">-</button>
+        <p class="counter">1</p><button class="cartshop-calculator--plus">+</button></div><p class="resultCalc"></p>
+        <p class="price-result">${getFlowerInf[key].price}</p>
+        <button data-rembtn class="xcross"><span class="xcross-line xcross-line--one"></span><span class="xcross-line xcross-line--two"></span></button></div>
            
            </li>`
         ulCart.insertAdjacentHTML('beforeend', item)
@@ -105,11 +107,11 @@ const removeLi = (() => {
   console.log(foundBtns)
   foundBtns.forEach((ev, indx) => {
     ev.addEventListener('click', e => {
-      ev.parentElement.remove()
+      ev.parentElement.parentElement.remove()
       const parseArray = JSON.parse(localStorage.getItem('arrayFlowerCard'))
       if (!parseArray) return console.log('cart shop empty')
       parseArray.splice(indx, indx + 1)
-      console.log(parseArray)
+      // console.log(parseArray)
       localStorage.setItem('arrayFlowerCard', JSON.stringify(parseArray))
     })
   })
@@ -117,9 +119,10 @@ const removeLi = (() => {
 
 const calcWrapper = document.querySelectorAll('.cartshop-calculator')
 let cartCounter = (() => {
-  calcWrapper.forEach(ev => {
+  calcWrapper.forEach((ev, indx) => {
     const minus = ev.querySelector('.cartshop-calculator--minus')
     const plus = ev.querySelector('.cartshop-calculator--plus')
+
     minus.addEventListener('click', (ev) => {
       console.log('click')
       calculator(-1)
@@ -131,7 +134,7 @@ let cartCounter = (() => {
     const calculator = (i) => {
       const countCalc = ev.querySelector('.counter')
       let calcCount = Number(countCalc.textContent)
-      console.log(calcCount + 'calcCount')
+      // console.log(calcCount + 'calcCount')
       if (calcCount >= 1 && calcCount < 100) {
         calcCount += i
         countCalc.innerHTML = calcCount
@@ -140,22 +143,23 @@ let cartCounter = (() => {
         calcCount = 1
         countCalc.innerHTML = calcCount
       }
-      console.log(i, calcCount)
+      // console.log(i, calcCount)
       multiplication(calcCount)
     }
     const multiplication = (calcCount) => {
       const priceElem = ev.parentNode.querySelector('.price-result')
+      const parseArray = JSON.parse(localStorage.getItem('arrayFlowerCard'))
+      let price = ''
+      console.log(price)
+      // let priceVal = 
       let priceVal = priceElem.textContent
       priceElem.innerHTML = priceVal * calcCount
 
       if (priceElem) {
         const allCount = document.querySelectorAll('.counter')
-        allCount.forEach(ev => {
-          const parseArray = JSON.parse(localStorage.getItem('arrayFlowerCard'))
-          parseArray.forEach((evs, indx) => {
-            const rewriteArray = evs.number = Number(allCount[indx].textContent)
+        allCount.forEach((ev, index) => {
+          parseArray.forEach((evs, indx) => {const rewriteArray = evs.number = Number(allCount[indx].textContent)
           })
-          console.log(parseArray)
           localStorage.setItem('arrayFlowerCard', JSON.stringify(parseArray))
         })
       }

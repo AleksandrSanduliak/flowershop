@@ -10,10 +10,16 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 25px;
+    @media(max-width:768.98px){
+      padding: 5px 15px;
+    }
   }
 
   &-title {
     color: #222a46;
+    align-self: flex-start;
+    justify-self: left;
+
   }
 
   &-subtitle {
@@ -21,14 +27,19 @@
   }
 
   &-list {
-    max-width: 870px;
+    max-width: 70vw;
     font-family: "TT Norms";
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     border: 1px solid #e3e3e8;
-    max-width: 870px;
     border-radius: 10px;
+    line-height: 1;
+    @media (max-width: 768.98px) {
+      max-width: none;
+      // max-width: 600px;
+      // max-width: calc(280px + (660 - 280) * ((100vw - 320px) / 880));;
+    }
   }
 
   &-body {
@@ -37,7 +48,12 @@
     font-size: 14px;
     line-height: 10px;
     color: #222a46;
-    // margin-right: 2vw;
+    max-width: 205px;
+    line-height: 1;
+    @media(max-width:767.98px){
+      margin-right: 5px;
+      max-width: calc(105px + (204 - 105) * ((100vw - 320px) / 880));
+    }
   }
 
   &-item {
@@ -45,13 +61,23 @@
     border-top: 1px solid #e3e3e8;
 
     display: flex;
-
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1 50%;
+    @media (max-width: 510.98px) {
+      flex-wrap: wrap;
+      justify-content: stretch;
+      padding: 10px 10px;
+    }
     & > img {
       width: 90px;
       height: 90px;
       // object-fit: cover;
       border-radius: 10px;
       margin-right: 20px;
+      @media(max-width:768.98px){
+        margin-bottom: 10px;
+      }
     }
 
     &:first-child {
@@ -60,7 +86,21 @@
       justify-content: space-between;
     }
   }
-
+  &__rightside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 300px;
+    flex: 1 1 50%;
+    @media (max-width: 768.98px) {
+      // margin-left: 110px;
+      // margin-left: calc(50px - (110 - 50) * ((100vw - 320px) / 880));
+      margin-left: auto;
+      flex: 1 1 100%;
+      max-width: 280px;
+      min-width: 170px;
+    }
+  }
   &-calculator {
     display: flex;
     flex-direction: row;
@@ -102,6 +142,7 @@
   height: 24px;
   background: inherit;
   transition: all 0.4s ease;
+  
   &:hover {
     border-color: #e2195b;
   }
